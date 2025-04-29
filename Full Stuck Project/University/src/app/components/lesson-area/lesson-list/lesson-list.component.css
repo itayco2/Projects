@@ -1,0 +1,83 @@
+/* Section Styling */
+.courses-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.section-subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* Courses Grid */
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Course Card */
+.lesson-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Course Title */
+.lesson-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+
+
+/* Enroll Button */
+.enroll-btn {
+    width: 20%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+/* Enroll Button */
+.lesson-btn {
+    width: 20%;
+    margin-top: 15px;
+    padding: 10px;
+   margin-left: 50px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+    
+}
+
+.enroll-btn:hover {
+    background: #059669;
+}

@@ -1,0 +1,51 @@
+<div dir="rtl">
+    <form [formGroup]="contactFormGroup" action="javascript:void(0)" (ngSubmit)="send()">
+        <mat-form-field appearance="outline">
+            <mat-label>שם: </mat-label>
+            <input matInput type="text" formControlName="nameControl">
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('required')">
+                שדה זה חובה
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('maxlength')">
+                שם לא יכול להיות יותר מ 50 תווים
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('minlength')">
+                שם לא יכול להיות קצר מ 2 תווים
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>אימייל: </mat-label>
+            <input type="email" matInput formControlName="emailControl">
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('required')">
+                שדה זה חובה
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('minlength')">
+                אימייל לא יכול להיות קצר מ 2 תווים
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('maxlength')">
+                אימייל לא יכול להיות ארוך מ 100 תווים
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('pattern')">
+                אימייל בפורמט לא תקין
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>הודעה: </mat-label>
+            <textarea matInput formControlName="messageControl"></textarea>
+            <mat-error *ngIf="contactFormGroup.get('messageControl').hasError('required')">
+                שדה זה חובה
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('messageControl').hasError('maxlength')">
+                ההודעה לא יכולה להיות ארוכה מ 1000 תווים
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="contactFormGroup.invalid">שליחה</button>
+            <button mat-raised-button color="secondary" type="reset">ניקוי</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,38 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mat-mdc-form-field {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field-error-wrapper {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    text-align: right;
+  }
+  
+  .mat-mdc-form-field-error {
+    position: relative;
+    right: 0;
+    text-align: right;
+    color: #f44336;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  

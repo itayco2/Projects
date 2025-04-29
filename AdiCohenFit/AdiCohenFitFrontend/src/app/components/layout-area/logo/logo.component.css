@@ -1,0 +1,19 @@
+/* Logo container styling */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 100; /* Ensures logo appears above other elements */
+  }
+  
+  .logo-container img {
+    max-height: 100px; /* Increased size from 50px to 80px */
+    width: auto;
+  }
+  
+  /* Ensuring the link doesn't have default styling */
+  .logo-container a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+  }

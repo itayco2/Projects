@@ -1,0 +1,150 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky; /* changed from relative */
+    top: 0; /* stick to top */
+    z-index: 1000; /* make sure it’s above everything else */
+    background-color: white; /* optional, to avoid transparency while scrolling */
+    overflow: visible !important;
+  }
+  
+  
+  /* Left section (Phone & Social) */
+  .left-section {
+    display: flex;
+    overflow: visible; /* This allows child elements to overflow */
+    position: relative;
+    align-items: center;
+    gap: 12px;
+  }
+
+  app-user-menu {
+    position: relative;
+    overflow: visible;
+  }
+  
+  /* Center section for logo and navigation together */
+  .center-section {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between logo and navigation */
+  }
+  
+  /* Phone button styling */
+  .phone-button {
+    background-color: #222;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+  }
+  
+  .phone-button:hover {
+    background-color: #444;
+  }
+  
+  /* Social icon styling */
+  .social-icon {
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+  }
+  
+  .social-icon:hover {
+    background-color: #444;
+  }
+  
+
+  
+  /* Navigation styling */
+  .navigation {
+    display: flex;
+    gap: 25px;
+    align-items: center; /* Vertically align with logo */
+  }
+  
+  .navigation a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  
+  .navigation a:hover {
+    color: #666;
+  }
+  
+  /* Logo styling */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 80px; /* Adjust the height as needed */
+    width: auto; /* This maintains the aspect ratio */
+    max-width: 100%; /* Ensures the logo doesn't overflow its container */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .center-section {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .navigation {
+      display: none;
+    }
+    
+    .header-container {
+      padding: 15px 20px;
+    }
+  }
+  
+  /* For RTL support */
+  [dir="rtl"] .center-section {
+    flex-direction: row-reverse; /* Reverse the order for RTL */
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: relative;
+    z-index: 10;
+    overflow: visible !important; /* Ensure dropdown can appear outside */
+  }
+  
+  
+  /* Left section (Phone & Social) */
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: visible !important; /* Ensure dropdown can appear outside */
+  }
+  
+  /* Add this to ensure dropdowns can be visible */
+  app-user-menu {
+    position: relative;
+    z-index: 100; /* Higher than header */
+    overflow: visible !important; /* Critical - allow the dropdown to be visible */
+  }

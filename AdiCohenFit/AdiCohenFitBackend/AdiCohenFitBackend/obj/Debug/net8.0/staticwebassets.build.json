@@ -1,0 +1,743 @@
+{
+  "Version": 1,
+  "Hash": "30n+qSLIXnaT40pqm/6/A6k0XK1MrpR9KHQddY9zEpg=",
+  "Source": "AdiCohenFitBackend",
+  "BasePath": "_content/AdiCohenFitBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AdiCohenFitBackend\\wwwroot",
+      "Source": "AdiCohenFitBackend",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kz23nuqaz2",
+      "Integrity": "IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/7b57736d-af1e-4feb-9149-2f0fb86c3c7f#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u9i5874gs5",
+      "Integrity": "PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/81252099-9946-4d57-956a-14933e2efd76#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u9i5874gs5",
+      "Integrity": "PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/8a596830-fba7-4672-8590-3332fbff196d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n2m112w9or",
+      "Integrity": "AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/b95a6b17-70da-4aec-96bb-770b557acccf#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kz23nuqaz2",
+      "Integrity": "IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "37z01inv4w",
+      "Integrity": "0fQtr5JX7yKgvk9Kqdcg+GbNR7ezsaCkbcPbzJfoB04=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico"
+    },
+    {
+      "Identity": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
+      "SourceId": "AdiCohenFitBackend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\",
+      "BasePath": "_content/AdiCohenFitBackend",
+      "RelativePath": "assets/images/f5eff184-0a19-4b3e-902a-e00cb7c90912#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kz23nuqaz2",
+      "Integrity": "IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "assets/images/3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 10:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.kz23nuqaz2.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 10:46:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kz23nuqaz2"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:37:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/7b57736d-af1e-4feb-9149-2f0fb86c3c7f.u9i5874gs5.jpeg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 16:37:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9i5874gs5"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/81252099-9946-4d57-956a-14933e2efd76.jpeg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:41:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/81252099-9946-4d57-956a-14933e2efd76.u9i5874gs5.jpeg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "469499"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 15:41:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u9i5874gs5"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/81252099-9946-4d57-956a-14933e2efd76.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/8a596830-fba7-4672-8590-3332fbff196d.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2820252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:23:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/8a596830-fba7-4672-8590-3332fbff196d.n2m112w9or.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2820252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 29 Apr 2025 11:23:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n2m112w9or"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/8a596830-fba7-4672-8590-3332fbff196d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/b95a6b17-70da-4aec-96bb-770b557acccf.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:27:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/b95a6b17-70da-4aec-96bb-770b557acccf.kz23nuqaz2.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 26 Apr 2025 08:27:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kz23nuqaz2"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/b95a6b17-70da-4aec-96bb-770b557acccf.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.37z01inv4w.ico",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48612"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0fQtr5JX7yKgvk9Kqdcg+GbNR7ezsaCkbcPbzJfoB04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 20:23:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "37z01inv4w"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0fQtr5JX7yKgvk9Kqdcg+GbNR7ezsaCkbcPbzJfoB04="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "48612"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0fQtr5JX7yKgvk9Kqdcg+GbNR7ezsaCkbcPbzJfoB04=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 22 Apr 2025 20:23:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0fQtr5JX7yKgvk9Kqdcg+GbNR7ezsaCkbcPbzJfoB04="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 10:46:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/f5eff184-0a19-4b3e-902a-e00cb7c90912.kz23nuqaz2.jpg",
+      "AssetFile": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51254"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Apr 2025 10:46:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kz23nuqaz2"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="
+        }
+      ]
+    }
+  ]
+}

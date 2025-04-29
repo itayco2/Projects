@@ -1,0 +1,121 @@
+/* Navigation Menu Styles */
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* For sidebar navigation */
+.app-sidebar .navigation-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-text {
+    margin-left: 4px;
+    white-space: nowrap; /* This ensures text stays on one line */
+    display: inline-block; /* Better inline behavior */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+    max-width: 100%; /* Make sure it doesn't exceed its container */
+}
+
+/* Active link styling */
+.nav-link.active {
+    color: wheat;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* For header navigation active state */
+.header-container .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: wheat;
+}
+
+/* Left-aligned navigation in the header */
+.left-section .navigation-menu {
+    justify-content: flex-start;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navigation-menu {
+        justify-content: center;
+    }
+    
+    .left-section .navigation-menu {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navigation-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav-link {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+.phone-button {
+    display: inline-block;
+    background-color: #263033;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 9999px; /* Fully rounded ends */
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    max-width: 100%; /* Ensures it doesn't exceed container width */
+    box-sizing: border-box; /* Includes padding in width calculation */
+  }
+
+.instagram-link {
+  display: inline-block;
+}
+
+.instagram-link:hover {
+  color: #333; /* Optional: slightly lighter black on hover */
+}
+
+.instagram-icon {
+  width: 100px; 
+  height: 100px;
+  transition: opacity 0.2s ease;
+}
+
+.instagram-icon:hover {
+  opacity: 0.8; /* Subtle hover effect */
+}

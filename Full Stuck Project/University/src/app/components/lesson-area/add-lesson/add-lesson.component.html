@@ -1,0 +1,44 @@
+<div>
+    <form [formGroup]="lessonFormGroup" (submit)="send()">
+
+        <!-- Title Field -->
+        <mat-form-field appearance="outline">
+            <mat-label>Title: </mat-label>
+            <input matInput formControlName="titleControl" type="text">
+            <mat-error *ngIf="lessonFormGroup.controls['titleControl'].hasError('required') && lessonFormGroup.controls['titleControl'].touched">
+                Missing title.
+            </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['titleControl'].hasError('minlength') && lessonFormGroup.controls['titleControl'].touched">
+                Title too short.
+            </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['titleControl'].hasError('maxlength') && lessonFormGroup.controls['titleControl'].touched">
+                Title too long.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Video URL Field -->
+        <mat-form-field appearance="outline">
+            <mat-label>Video URL: </mat-label>
+            <textarea matInput formControlName="videoUrlControl"></textarea>
+            <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('required') && lessonFormGroup.controls['videoUrlControl'].touched">
+                Missing Video URL.
+            </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('minlength') && lessonFormGroup.controls['videoUrlControl'].touched">
+                Video URL is too short.
+            </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('maxlength') && lessonFormGroup.controls['videoUrlControl'].touched">
+                Video URL can't exceed 1000 characters.
+            </mat-error>
+            <mat-error *ngIf="lessonFormGroup.controls['videoUrlControl'].hasError('invalidYouTubeUrl') && lessonFormGroup.controls['videoUrlControl'].touched">
+                Video URL is not valid.
+            </mat-error>            
+        </mat-form-field>
+
+        <!-- Submit Button -->
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="lessonFormGroup.invalid">Send</button>
+            <button mat-raised-button color="secondary" type="reset">Clear</button>
+        </div>
+
+    </form>
+</div>

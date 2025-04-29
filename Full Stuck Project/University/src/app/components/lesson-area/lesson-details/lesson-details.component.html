@@ -1,0 +1,30 @@
+<div *ngIf="lesson; else loading">
+    <h2>{{ lesson.title }}</h2>
+  
+    <div class="video-container">
+      <iframe [src]="getVideoUrl(lesson.videoUrl)" width="560" height="315" title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  
+    <div *ngIf="!isWatched && !canDeleteLesson">
+      <button (click)="markAsWatched()" class="mark-watched-btn">Mark as Watched</button>
+    </div>
+  
+    <div *ngIf="isWatched">
+      <button class="watched-message-btn" disabled>Lesson Already Watched</button>
+    </div>
+
+    <div *ngIf="canDeleteLesson">
+        <button class="edit-lesson-btn" (click)="editLesson(lesson.id)">Edit Lesson</button>
+      </div>
+  
+    <div *ngIf="canDeleteLesson">
+      <button class="delete-lesson-btn" (click)="deleteLesson(lesson.id)">Delete Lesson</button>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <p>Loading lesson details...</p>
+  </ng-template>
+  

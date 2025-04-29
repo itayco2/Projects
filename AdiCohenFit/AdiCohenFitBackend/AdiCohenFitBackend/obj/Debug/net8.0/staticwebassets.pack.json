@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\7b57736d-af1e-4feb-9149-2f0fb86c3c7f.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\81252099-9946-4d57-956a-14933e2efd76.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\8a596830-fba7-4672-8590-3332fbff196d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\b95a6b17-70da-4aec-96bb-770b557acccf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\eaf3216c-ef8d-4dd8-bf70-52fb68a87e8a.ico"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AdiCohenFitBackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AdiCohenFitBackend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AdiCohenFitBackend.props",
+      "PackagePath": "build\\AdiCohenFitBackend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AdiCohenFitBackend.props",
+      "PackagePath": "buildMultiTargeting\\AdiCohenFitBackend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AdiCohenFitBackend.props",
+      "PackagePath": "buildTransitive\\AdiCohenFitBackend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

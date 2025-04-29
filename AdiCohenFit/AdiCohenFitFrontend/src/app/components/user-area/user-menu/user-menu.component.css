@@ -1,0 +1,72 @@
+/* User Menu container */
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+  }
+
+/* User info (image and greeting) */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+/* Dropdown Menu styling */
+.dropdown-menu {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    margin-top: 5px;
+  }
+
+/* Each option container */
+.dropdown-option {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  transition: all 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styling for links in the dropdown */
+.dropdown-menu a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown-menu a:hover {
+  color: #007bff;
+}
+
+.clickable-text {
+  cursor: pointer;
+  padding-right: 5px;
+}
+.dropdown-menu-wrapper {
+    /* We'll set position, top, right via JavaScript */
+    /* The default position in case JavaScript fails */
+    position: absolute; 
+    top: 100%;  
+    right: 0;  
+    z-index: 9999;
+  }
+
+a {
+  color: #3f5a4b;
+  text-decoration: none;
+  padding: 5px;
+}

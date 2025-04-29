@@ -1,0 +1,24 @@
+<div class="courses-section">
+    <h2 class="section-title">Featured Lessons</h2>
+
+
+    <div class="courses-grid">
+        @for (l of lessons; track l.id) {
+            <div class="lesson-card">
+                <div class="lesson-content">
+                    <h3 class="lesson-title">{{l.title}}</h3>
+                    <p class="lesson-description">{{l.videoUrl}}</p>
+                </div>
+                <button 
+                class="lesson-btn"
+                [routerLink]="['/lessons', l.id]" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [disabled]="!isEnrolled(l)"
+                (click)="!isEnrolled(l)">
+                View Lesson
+            </button>
+            </div>
+        }
+    </div>
+</div>

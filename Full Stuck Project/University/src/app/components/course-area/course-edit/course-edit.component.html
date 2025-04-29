@@ -1,0 +1,40 @@
+<div>
+    <form [formGroup]="courseFormGroup" (submit)="send()">
+        
+        <!-- Title Field -->
+        <mat-form-field appearance="outline">
+            <mat-label>Title: </mat-label>
+            <input matInput formControlName="titleControl" type="text">
+            <mat-error *ngIf="courseFormGroup.controls['titleControl'].hasError('required') && courseFormGroup.controls['titleControl'].touched">
+                Title is required.
+            </mat-error>
+            <mat-error *ngIf="courseFormGroup.controls['titleControl'].hasError('minlength') && courseFormGroup.controls['titleControl'].touched">
+                Title can't be less than 2 characters.
+            </mat-error>
+            <mat-error *ngIf="courseFormGroup.controls['titleControl'].hasError('maxlength') && courseFormGroup.controls['titleControl'].touched">
+                Title can't exceed 100 characters.
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Description Field -->
+        <mat-form-field appearance="outline">
+            <mat-label>Description: </mat-label>
+            <textarea matInput formControlName="descriptionControl"></textarea>
+            <mat-error *ngIf="courseFormGroup.controls['descriptionControl'].hasError('required') && courseFormGroup.controls['descriptionControl'].touched">
+                Description is required.
+            </mat-error>
+            <mat-error *ngIf="courseFormGroup.controls['descriptionControl'].hasError('minlength') && courseFormGroup.controls['descriptionControl'].touched">
+                Description can't be less than 10 characters.
+            </mat-error>
+            <mat-error *ngIf="courseFormGroup.controls['descriptionControl'].hasError('maxlength') && courseFormGroup.controls['descriptionControl'].touched">
+                Description can't exceed 1000 characters.
+            </mat-error>
+        </mat-form-field>
+        
+        <!-- Buttons -->
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="courseFormGroup.invalid">Send</button>
+            <button mat-raised-button color="secondary" type="reset">Clear</button>
+        </div>
+    </form>
+</div>

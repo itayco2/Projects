@@ -1,0 +1,51 @@
+<div class="login-container">
+    <form class="login-form" [formGroup]="credentialsFormGroup" (ngSubmit)="send()">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input 
+                matInput 
+                type="email" 
+                formControlName="emailControl" 
+                placeholder="Enter your email"
+            >
+            <mat-error *ngIf="credentialsFormGroup.get('emailControl').hasError('required')">
+                Email is required
+            </mat-error>
+            <mat-error *ngIf="credentialsFormGroup.get('emailControl').hasError('email')">
+                Please enter a valid email
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input 
+                matInput 
+                type="password" 
+                formControlName="passwordControl" 
+                placeholder="Enter your password"
+            >
+            <mat-error *ngIf="credentialsFormGroup.get('passwordControl').hasError('required')">
+                Password is required
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button 
+                mat-raised-button 
+                color="primary" 
+                type="submit" 
+                [disabled]="credentialsFormGroup.invalid"
+            >
+                Login
+            </button>
+            <button 
+                mat-raised-button 
+                color="warn" 
+                type="button" 
+                (click)="credentialsFormGroup.reset()"
+            >
+                Clear
+            </button>
+        </div>
+    </form>
+</div>

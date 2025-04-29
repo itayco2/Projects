@@ -1,0 +1,50 @@
+<div>
+    <form [formGroup]="contactFormGroup">
+        <mat-form-field appearance="outline">
+            <mat-label>Name: </mat-label>
+            <input matInput type="text" formControlName="nameControl">
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('required')">
+                The Name field is required.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('maxlength')">
+                Name can't exceed 50 characters.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('nameControl').hasError('minlength')">
+                Name can't be less than 2 characters.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email: </mat-label>
+            <input type="email" matInput formControlName="emailControl">
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('required')">
+                Email is required.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('minlength')">
+                Email must be a minimum of 2 characters long.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('maxlength')">
+                Email can't exceed 100 characters.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('emailControl').hasError('pattern')">
+                Invalid Email.
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Message: </mat-label>
+            <textarea matInput formControlName="messageControl"></textarea>
+            <mat-error *ngIf="contactFormGroup.get('messageControl').hasError('required')">
+                Message is required.
+            </mat-error>
+            <mat-error *ngIf="contactFormGroup.get('messageControl').hasError('maxlength')">
+                Message can't exceed 1000 characters.
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="contactFormGroup.invalid">Send</button>
+            <button mat-raised-button color="secondary" type="reset">Clear</button>
+        </div>
+    </form>
+</div>

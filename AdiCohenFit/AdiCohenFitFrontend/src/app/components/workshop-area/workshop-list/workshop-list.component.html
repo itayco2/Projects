@@ -1,0 +1,55 @@
+<div class="workshop-section" dir="rtl">
+    <h2 class="section-title">רשימת סדנאות</h2>
+    <p class="section-subtitle">תבואו להתנסות ממגוון הסדנאות שלנו</p>
+    
+
+    
+    <div class="workshops-container">
+      <div class="workshop-card" 
+          *ngFor="let workshop of workshops" 
+          [style.background-image]="getBackgroundStyle(workshop)">
+          
+          <!-- Add sold out ribbon when places are 0 or less -->
+          <div *ngIf="workshop.workshopPlacesLeft <= 0" class="sold-out-ribbon">
+            !SOLD OUT
+          </div>
+          
+          <!-- Back button similar to the image you shared -->
+           <a [href]="workshop.paymentLink" *ngIf="!canAddWorkshop && workshop.workshopPlacesLeft > 0" class="back-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 12H5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+          
+          <div class="workshop-content">
+              <h3 class="workshop-title">{{ workshop.workshopName }}</h3>
+              <p class="workshop-description">{{ workshop.workshopDescription }}</p> 
+              <p class="workshop-places-left">מקומות שנשארו: {{ workshop.workshopPlacesLeft }}</p>
+              <p class="workshop-price">מחיר: {{ workshop.workshopPrice }} ₪</p>
+              <p class="workshop-date">תאריך: {{ workshop.workshopDate |date: 'dd/MM/yyyy HH:mm' }}</p>
+              
+              <!-- Regular user buttons -->
+              <div *ngIf="!canAddWorkshop && workshop.workshopPlacesLeft > 0">
+                <a [href]="workshop.paymentLink">
+                <button  class="continue">הרשמה</button>
+            </a>
+              </div>
+              
+              <!-- Admin buttons -->
+              <div *ngIf="canAddWorkshop">
+                  <button (click)="deleteWorkshop(workshop.id)" class="admin-delete-workshop">מחק סדנא</button>
+                  <button (click)="goToWorkshopDetails(workshop.id)" class="workshop-details-btn">עריכה</button>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Show "Add Workshop" if allowed -->
+    <div *ngIf="canAddWorkshop" class="admin-workshop-container">
+      <a routerLink="/workshop/new" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }" class="admin-add-workshop">
+        הוסף סדנא
+      </a>
+    </div>
+  </div>

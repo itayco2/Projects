@@ -1,0 +1,102 @@
+/* App Header Styles */
+.app-header {
+    background-color: #51869c;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 70px;
+  }
+  
+  /* Left Section with Logo and Menu */
+  .left-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+  }
+  
+  /* Center Title */
+  .site-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: #fff;
+    text-transform: uppercase;
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Right User Menu */
+  .user-menu-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
+  /* Target the Angular Components */
+  app-logo {
+    display: block;
+  }
+  
+  app-menu {
+    display: flex;
+  }
+  
+  app-user-menu {
+    display: block;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 0.6rem 1rem;
+      height: 60px;
+    }
+    
+    .site-title {
+      font-size: 1.4rem;
+    }
+    
+    .left-section {
+      gap: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-container {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 0.5rem;
+    }
+    
+    .site-title {
+      font-size: 1.2rem;
+      order: 1;
+      width: 100%;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    
+    .left-section {
+      order: 2;
+      flex: 0 0 50%;
+    }
+    
+    .user-menu-container {
+      order: 3;
+      flex: 0 0 50%;
+    }
+  }

@@ -1,0 +1,32 @@
+<div class="homepage-container">
+    <header class="homepage-header">
+      <h1>Welcome to Our Platform</h1>
+      <p class="subtitle">Your one-stop solution for amazing experiences</p>
+    </header>
+  
+    <div class="homepage-image">
+      <img src="assets/images/home.jpg" alt="Homepage">
+    </div>
+  
+    <section class="features-section">
+      <div class="feature-card">
+        <h3>Easy to Use</h3>
+        <p>Our intuitive interface makes navigation simple and efficient.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Powerful Tools</h3>
+        <p>Access a wide range of powerful tools designed for your needs.</p>
+      </div>
+      <div class="feature-card">
+        <h3>24/7 Support</h3>
+        <p>Our dedicated team is always ready to assist you.</p>
+      </div>
+    </section>
+  
+    <section *ngIf="!isLoggedIn" class="cta-section">
+      <h2>Ready to get started?</h2>
+      <a routerLink="/register">
+      <button class="cta-button">Get Started Now</button>
+    </a>
+    </section>
+  </div>

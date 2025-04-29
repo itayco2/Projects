@@ -1,0 +1,44 @@
+<div dir="rtl">
+    <form [formGroup]="userFormGroup" (submit)="send()">
+
+        <mat-form-field appearance="outline">
+            <mat-label>שם:</mat-label>
+            <input type="text" matInput formControlName="nameControl">
+            <mat-error *ngIf="getFirstErrorMessage('nameControl')">
+                {{ getFirstErrorMessage('nameControl') }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>אימייל:</mat-label>
+            <input type="email" matInput formControlName="emailControl">
+            <mat-error *ngIf="getFirstErrorMessage('emailControl')">
+                {{ getFirstErrorMessage('emailControl') }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>סיסמא:</mat-label>
+            <input type="password" matInput formControlName="passwordControl">
+            <mat-error *ngIf="getFirstErrorMessage('passwordControl')">
+                {{ getFirstErrorMessage('passwordControl') }}
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>טלפון:</mat-label>
+            <input type="tel" matInput formControlName="telephoneControl">
+            <mat-error *ngIf="getFirstErrorMessage('telephoneControl')">
+                {{ getFirstErrorMessage('telephoneControl') }}
+            </mat-error>
+        </mat-form-field>
+
+
+
+        <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" [disabled]="userFormGroup.invalid">Send</button>
+            <button mat-raised-button color="secondary" type="reset">Clear</button>
+        </div>
+
+    </form>
+</div>

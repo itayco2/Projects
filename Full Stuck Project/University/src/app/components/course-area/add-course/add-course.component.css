@@ -1,0 +1,79 @@
+/* Form container */
+div {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Input field styling */
+mat-input-element {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Error message styling */
+mat-error {
+    font-size: 12px;
+    color: #f44336; /* Red color for errors */
+    margin-top: 4px;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Button styling */
+button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Disabled button styling */
+button[disabled] {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* Primary button color */
+button[color="primary"] {
+    background-color: #1976d2;
+    color: white;
+}
+
+/* Secondary button color */
+button[color="secondary"] {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Hover effect for buttons */
+button:hover:not([disabled]) {
+    opacity: 0.8;
+}
+

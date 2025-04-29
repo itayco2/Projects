@@ -1,0 +1,35 @@
+<div class="courses-section">
+    <h2 class="section-title">Featured Courses</h2>
+    <p class="section-subtitle">Explore our most popular courses and start your learning journey today.</p>
+
+    <div class="courses-grid">
+        <div class="course-card" *ngFor="let course of courses">
+            <div class="course-content">
+                <h3 class="course-title">{{ course.title }}</h3>
+                <p class="course-description">{{ course.description }}</p>
+                <span class="course-date">{{ course.createdAt | date }}</span>
+            </div>
+            
+            <button *ngIf="!isEnrolled(course) && !canAddCourse" class="enroll-btn" (click)="enroll(course)">
+                Enroll Now
+            </button>
+
+            <button *ngIf="isEnrolled(course)" class="enrolled-btn" disabled>
+                Already Enrolled
+            </button>
+
+            <button *ngIf="isEnrolled(course) || canAddCourse" class="lesson-btn" 
+                    [routerLink]="['/course-details/', course.id, 'lessons']" 
+                    routerLinkActive="active" 
+                    [routerLinkActiveOptions]="{ exact: true }">
+                View Lessons
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="canViewCourse()">
+    <a routerLink="/course/new" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+        <span class="nav-text">Add Course</span>
+    </a>
+</div>

@@ -1,0 +1,6 @@
+@AdiCohenFitBackend_HostAddress = http://localhost:5022
+
+GET {{AdiCohenFitBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

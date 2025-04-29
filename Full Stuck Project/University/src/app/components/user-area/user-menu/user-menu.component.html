@@ -1,0 +1,28 @@
+<div class="user-menu">
+    <ng-container *ngIf="userStore.user(); else guestMenu">
+        <div class="user-info">
+            <img class="user-avatar" src="assets/images/avatar.png" alt="User Avatar" (click)="toggleMenu()" />
+        </div>
+
+        <div>
+            <span (click)="toggleMenu()" class="clickable-text">Hello {{ userStore.user().name }}</span>
+        </div>
+        <div *ngIf="isMenuOpen" class="dropdown-menu">
+          
+            <div class="dropdown-option">
+                <a routerLink="/home" (click)="logOut()">Logout</a>
+            </div>
+            <div *ngIf="canSeeProgress"
+             class="dropdown-option">
+                <a [routerLink]="['/progress', userStore.user().id]">View My Progress</a>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #guestMenu>
+        <span>Hello Guest | </span>
+        <a routerLink="/login">Login</a>
+        <span> | </span>
+        <a routerLink="/register">Register</a>
+    </ng-template>
+</div>

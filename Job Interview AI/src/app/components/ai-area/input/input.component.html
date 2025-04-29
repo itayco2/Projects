@@ -1,0 +1,29 @@
+<div>
+
+    <form (submit)="send()">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Subject: </mat-label>
+            <input matInput type="text" name="subject" [(ngModel)]="details.subject">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Total Questions: </mat-label>
+            <input matInput type="number" name="count" [(ngModel)]="details.count" min="1" max="10" value="5">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Level: </mat-label>
+            <select matNativeControl name="level" [(ngModel)]="details.level">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Expert</option>
+            </select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Ask GPT</button>
+
+    </form>
+
+
+</div>

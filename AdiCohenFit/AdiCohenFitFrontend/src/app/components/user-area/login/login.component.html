@@ -1,0 +1,51 @@
+<div class="login-container">
+    <form class="login-form" [formGroup]="credentialsFormGroup" (ngSubmit)="send()">
+        <mat-form-field appearance="outline">
+            <mat-label>אימייל</mat-label>
+            <input 
+                matInput 
+                type="email" 
+                formControlName="emailControl" 
+                placeholder="הכנס אימייל"
+            >
+            <mat-error *ngIf="credentialsFormGroup.get('emailControl').hasError('required')">
+                שדה זה חובה
+            </mat-error>
+            <mat-error *ngIf="credentialsFormGroup.get('emailControl').hasError('email')">
+                אימייל לא בפורמט נכון
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>סיסמא</mat-label>
+            <input 
+                matInput 
+                type="password" 
+                formControlName="passwordControl" 
+                placeholder="הכנס סיסמא"
+            >
+            <mat-error *ngIf="credentialsFormGroup.get('passwordControl').hasError('required')">
+                שדה זה חובה
+            </mat-error>
+        </mat-form-field>
+
+        <div class="button-container">
+            <button 
+                mat-raised-button 
+                color="primary" 
+                type="submit" 
+                [disabled]="credentialsFormGroup.invalid"
+            >
+                התחבר
+            </button>
+            <button 
+                mat-raised-button 
+                color="warn" 
+                type="button" 
+                (click)="credentialsFormGroup.reset()"
+            >
+                נקה
+            </button>
+        </div>
+    </form>
+</div>

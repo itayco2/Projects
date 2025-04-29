@@ -1,0 +1,166 @@
+<div class="workshop-section">
+    <h2 class="section-title">סדנא שנבחרה</h2>
+  
+    <div *ngIf="workshop" class="workshop-card" 
+         [style.background-image]="getBackgroundStyle(workshop)">
+      
+      <div class="workshop-content">
+        <h3 class="workshop-title">{{ workshop.workshopName }}</h3>
+        <p class="workshop-description">{{ workshop.workshopDescription }}</p> 
+        
+        <div class="workshop-info-container">
+          <h3 class="workshop-places-left">מקומות שנשארו: <span>{{ workshop.workshopPlacesLeft }}</span></h3>
+          <h3 class="workshop-price">מחיר: <span>{{ workshop.workshopPrice }} ₪</span></h3>
+          <h3 class="workshop-date">תאריך: <span>{{ workshop.workshopDate | date: 'dd/MM/yyyy HH:mm' }}</span></h3>
+        </div>
+      </div>
+    </div>
+  
+    <div routerLink="/home" class="back-to-workshops">
+      חזרה לרשימת הסדנאות
+    </div>
+  </div>
+  
+  <!-- Checkout Section - Hidden when payment form is visible -->
+  <div *ngIf="workshop && !showPaymentForm" class="checkout-section">
+    <h3 class="checkout-title">הזמנה</h3>
+  
+    <div class="quantity-control">
+      <button (click)="decreaseQuantity()">-</button>
+      <span>{{ quantity }}</span>
+      <button (click)="increaseQuantity()">+</button>
+    </div>
+  
+    <div class="checkout-price">
+      <p>סה"כ לתשלום: <strong>{{ totalPrice }} ₪</strong></p>
+    </div>
+  
+    <button class="checkout-button" (click)="proceedToCheckout()">המשך לתשלום</button>
+  </div>
+  
+  <!-- Payment Form - Only visible after clicking "Continue to Payment" -->
+  <div *ngIf="workshop && showPaymentForm" class="payment-container">
+    <h2 class="payment-title">תשלום עבור הסדנא</h2>
+    
+    <div class="payment-summary">
+      <div class="summary-item">
+        <span>סדנא:</span>
+        <span>{{ workshop.workshopName }}</span>
+      </div>
+      <div class="summary-item">
+        <span>כמות:</span>
+        <span>{{ quantity }}</span>
+      </div>
+      <div class="summary-item total">
+        <span>סה"כ לתשלום:</span>
+        <span>₪ {{ totalPrice }}</span>
+      </div>
+    </div>
+  
+    <form [formGroup]="paymentForm" (ngSubmit)="submitPayment()" class="payment-form">
+      <div class="form-section">
+        <h3 class="section-heading">פרטים אישיים</h3>
+        
+        <div class="form-group">
+          <label for="fullName">שם מלא</label>
+          <input type="text" id="fullName" formControlName="fullName" placeholder="שם מלא">
+          <div *ngIf="paymentForm.get('fullName')?.invalid && paymentForm.get('fullName')?.touched" class="error-message">
+            נא להזין שם מלא
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">אימייל</label>
+          <input type="email" id="email" formControlName="email" placeholder="your@email.com">
+          <div *ngIf="paymentForm.get('email')?.invalid && paymentForm.get('email')?.touched" class="error-message">
+            נא להזין כתובת אימייל תקינה
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">טלפון</label>
+          <input type="tel" id="phone" formControlName="phone" placeholder="05X-XXXXXXX">
+          <div *ngIf="paymentForm.get('phone')?.invalid && paymentForm.get('phone')?.touched" class="error-message">
+            נא להזין מספר טלפון תקין
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <h3 class="section-heading">פרטי תשלום</h3>
+        
+        <div class="payment-methods">
+          <div class="payment-method">
+            <input type="radio" id="creditCard" formControlName="paymentMethod" value="creditCard" checked>
+            <label for="creditCard">כרטיס אשראי</label>
+          </div>
+          <div class="payment-method">
+            <input type="radio" id="paypal" formControlName="paymentMethod" value="paypal">
+            <label for="paypal">PayPal</label>
+          </div>
+        </div>
+        
+        <!-- Credit Card Section -->
+        <div *ngIf="paymentForm.get('paymentMethod')?.value === 'creditCard'" class="credit-card-section">
+          <div class="form-group">
+            <label for="cardNumber">מספר כרטיס</label>
+            <input type="text" id="cardNumber" formControlName="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+            <div *ngIf="paymentForm.get('cardNumber')?.invalid && paymentForm.get('cardNumber')?.touched" class="error-message">
+              נא להזין מספר כרטיס תקין
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="expiryDate">תוקף</label>
+              <input type="text" id="expiryDate" formControlName="expiryDate" placeholder="MM/YY">
+              <div *ngIf="paymentForm.get('expiryDate')?.invalid && paymentForm.get('expiryDate')?.touched" class="error-message">
+                נא להזין תאריך תקין
+              </div>
+            </div>
+            
+            <div class="form-group half">
+              <label for="cvv">CVV</label>
+              <input type="password" id="cvv" formControlName="cvv" placeholder="XXX">
+              <div *ngIf="paymentForm.get('cvv')?.invalid && paymentForm.get('cvv')?.touched" class="error-message">
+                נא להזין קוד CVV תקין
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="cardholderName">שם בעל הכרטיס</label>
+            <input type="text" id="cardholderName" formControlName="cardholderName" placeholder="שם כפי שמופיע על הכרטיס">
+            <div *ngIf="paymentForm.get('cardholderName')?.invalid && paymentForm.get('cardholderName')?.touched" class="error-message">
+              נא להזין את שם בעל הכרטיס
+            </div>
+          </div>
+        </div>
+        
+        <!-- PayPal Section -->
+        <div *ngIf="paymentForm.get('paymentMethod')?.value === 'paypal'" class="paypal-section">
+          <p class="paypal-info">לחצו על כפתור "המשך לתשלום" כדי לעבור למסך התשלום של PayPal</p>
+        </div>
+      </div>
+      
+      <div class="form-section">
+        <div class="form-group checkbox">
+          <input type="checkbox" id="terms" formControlName="termsAccepted">
+          <label for="terms">אני מסכים/ה לתנאי השימוש ומדיניות הפרטיות</label>
+          <div *ngIf="paymentForm.get('termsAccepted')?.invalid && paymentForm.get('termsAccepted')?.touched" class="error-message">
+            יש לאשר את תנאי השימוש כדי להמשיך
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-payment" [disabled]="paymentForm.invalid || isSubmitting">
+          <span *ngIf="!isSubmitting">המשך לתשלום</span>
+          <span *ngIf="isSubmitting" class="spinner"></span>
+        </button>
+      </div>
+    </form>
+  
+    <div class="secure-payment-notice">
+      <span class="lock-icon">🔒</span>
+      <span>התשלום מאובטח ומוצפן בתקן SSL</span>
+    </div>
+  </div>

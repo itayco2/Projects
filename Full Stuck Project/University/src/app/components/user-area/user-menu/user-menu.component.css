@@ -1,0 +1,71 @@
+/* User Menu container */
+.user-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: relative; /* Make sure the dropdown is positioned correctly */
+  }
+  
+  /* User info (image and greeting) */
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer; /* Make the avatar clickable */
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    top: 50px; /* Adjust this based on your layout */
+    right: 0;
+    z-index: 10;
+  }
+  
+  /* Each option container */
+  .dropdown-option {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for links in the dropdown */
+  .dropdown-menu a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .dropdown-menu span {
+    color: #555;
+  }
+  
+  /* Optional: Close the dropdown if clicked outside */
+  body {
+    overflow: hidden; /* Optional: Prevent body scrolling when dropdown is open */
+  }
+  .clickable-text {
+    cursor: pointer;
+}
+a {
+    color: black;
+    text-decoration: none;
+}

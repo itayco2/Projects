@@ -1,0 +1,78 @@
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* For sidebar navigation */
+.app-sidebar .navigation-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.nav-text {
+    margin-left: 4px;
+}
+
+/* Active link styling */
+.nav-link.active {
+    color:wheat ;
+    font-weight: 600;
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* For header navigation active state */
+.header-container .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0d6efd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-container .navigation-menu {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navigation-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .header-container .navigation-menu {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}

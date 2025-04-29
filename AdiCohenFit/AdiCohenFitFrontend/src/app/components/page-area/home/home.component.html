@@ -1,0 +1,31 @@
+<div class="homepage-container" dir="rtl">
+    <div class="video-box">
+        <video autoplay muted loop playsinline class="background-video">           
+         <source src="assets/videos/pizza.mp4" type="video/mp4" />
+            הדפדפן שלך לא תומך בווידאו.
+        </video>
+        <div class="overlay"></div>
+
+        <div class="video-text">
+            <header class="homepage-header">
+                <h1>סדנאות הפיצה</h1>
+                <h1>של עדי כהן</h1>
+                <h2 class="subtitle">למדו להכין בצק שכולם ידברו עליו</h2>
+            </header>
+            <section class="cta-buttons">
+                <a (click)="scrollToWorkshops()">
+                    <button class="cta-button filled">
+                        <span class="button-text">סדנאות</span>
+                    </button>
+                </a>
+                <a routerLink="/nutrition">
+                    <button class="cta-button outline">
+                        <span class="button-text">קצת עלי</span>
+                    </button>
+                </a>
+            </section>
+        </div>
+    </div>
+</div>
+
+<app-workshop-list id="workshops"></app-workshop-list>

@@ -1,0 +1,71 @@
+/* General form container */
+div {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form fields */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+/* Label styling */
+mat-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input fields styling */
+input[type="text"], input[type="email"], textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mat-error styling */
+mat-error {
+    color: #e74c3c;
+    font-size: 12px;
+}
+
+/* Styling for the button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Buttons styling */
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 48%;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Reset button */
+button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Disabled button styling */
+button[disabled] {
+    background-color: #dcdcdc;
+    color: #888;
+}

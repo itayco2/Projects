@@ -1,0 +1,313 @@
+.workshop-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #f8f8f8;
+    direction: rtl;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Container for workshop cards */
+.workshops-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Import statement for suggested fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;700&family=Pathway+Gothic+One&family=Staatliches&display=swap');
+
+/* Modern Sold Out Ribbon - Option 1: Bebas Neue */
+.sold-out-ribbon {
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    top: 300px;
+    right: 70px;
+    width: 250px;
+    background: linear-gradient(135deg, #ff0844, #ff3d5f);
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    padding: 12px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+    pointer-events: none;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Option 2: Oswald - Clean and Impactful */
+.sold-out-ribbon.oswald {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d00000, #e85d04);
+    font-size: 1.4rem;
+    letter-spacing: 2.5px;
+    padding: 10px 0;
+}
+
+/* Option 3: Staatliches - Bold and Vintage Feel */
+.sold-out-ribbon.staatliches {
+    font-family: 'Staatliches', cursive;
+    background: linear-gradient(135deg, #2d00f7, #8900f2);
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+/* Option 4: Pathway Gothic One - Sleek and Modern */
+.sold-out-ribbon.pathway {
+    font-family: 'Pathway Gothic One', sans-serif;
+    background: linear-gradient(135deg, #2b2d42, #44516a);
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Animated version (can be added to any style) */
+.sold-out-ribbon.animated {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.9;
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1.05);
+    }
+    100% {
+        opacity: 0.9;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* LTR version (if needed) */
+[dir="ltr"] .sold-out-ribbon {
+    left: -55px;
+    right: auto;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+}
+
+/* LTR for animated version */
+[dir="ltr"] .sold-out-ribbon.animated {
+    animation: pulse-ltr 2s infinite;
+}
+
+@keyframes pulse-ltr {
+    0% {
+        opacity: 0.9;
+        transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(-45deg) scale(1.05);
+    }
+    100% {
+        opacity: 0.9;
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+
+
+
+
+
+
+.workshop-card {
+    position: relative;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.workshop-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.workshop-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.7) 70%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 1;
+}
+
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.workshop-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    z-index: 2;
+    text-align: right;
+}
+
+.workshop-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.workshop-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.workshop-places-left,
+.workshop-price {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.workshop-date {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.continue {
+    display: inline-block;
+    background-color: #4eb124;
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.continue:hover {
+    background-color: #22c561;
+}
+
+/* Button styling */
+.enroll-btn, 
+.workshop-details-btn, 
+.admin-delete-workshop {
+    display: inline-block;
+    background-color: #e21e1e;
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    margin-right: 10px; /* Add space between buttons */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* For RTL layouts, you might want to use margin-left instead */
+
+.enroll-btn:hover, 
+.workshop-details-btn:hover, 
+.admin-delete-workshop:hover {
+    background-color: #c52222;
+}
+
+.admin-workshop-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.admin-add-workshop {
+    display: inline-block;
+    padding: 1rem 2.25rem;
+    font-size: 1.2rem;
+    background-color: #e32929;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-add-workshop:hover {
+    background-color: #c52222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .workshops-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .workshop-card {
+        height: 400px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}

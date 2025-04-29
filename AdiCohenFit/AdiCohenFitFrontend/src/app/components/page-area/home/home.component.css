@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    overflow-x: hidden;
+}
+
+/* Container */
+.homepage-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Video Box */
+.video-box {
+    position: relative;
+    width: 95%;
+    height: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Video Text Bottom Right */
+.video-text {
+    position: absolute;
+    bottom: 40px;
+    right: 20px; /* Changed from 40px to 20px */
+    text-align: right;
+    z-index: 3;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Headings */
+.homepage-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0.1em 0;
+    line-height: 1.1;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-left: auto; /* Ensures it's aligned to the far right */
+}
+
+.cta-button {
+    border-radius: 30px;
+    padding: 12px 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.cta-button.outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.cta-button.filled {
+    background-color: white;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.filled:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .video-box {
+        width: 90%;
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-box {
+        height: 380px;
+    }
+
+    .video-text {
+        bottom: 20px;
+        right: 20px;
+        max-width: 90%;
+    }
+
+    .homepage-header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 10px 28px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-box {
+        height: 250px;
+    }
+
+    .homepage-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}

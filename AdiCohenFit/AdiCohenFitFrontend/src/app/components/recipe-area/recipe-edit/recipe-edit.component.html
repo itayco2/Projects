@@ -1,0 +1,202 @@
+<div dir="rtl">
+    <form [formGroup]="recipeForm" (submit)="onSubmit()">
+
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label>שם המתכון:</mat-label>
+            <input matInput formControlName="recipeName" required>
+            <mat-error *ngIf="recipeForm.controls['recipeName'].hasError('required') && recipeForm.controls['recipeName'].touched">
+                חסר שם
+            </mat-error>
+            <mat-error *ngIf="recipeForm.controls['recipeName'].hasError('minlength') && recipeForm.controls['recipeName'].touched">
+                שם קצר מידי
+            </mat-error>
+            <mat-error *ngIf="recipeForm.controls['recipeName'].hasError('maxlength') && recipeForm.controls['recipeName'].touched">
+                שם ארוך מידי
+            </mat-error>
+        </mat-form-field>
+
+        <!-- Category section with management options -->
+        <div class="category-section">
+            <mat-form-field appearance="outline" class="w-full">
+                <mat-label>קטגוריה:</mat-label>
+                <mat-select formControlName="categoryId" required>
+                    <mat-option *ngFor="let category of categories" [value]="category.id">
+                        {{ category.categoryName }}
+                    </mat-option>
+                </mat-select>
+                <mat-error *ngIf="recipeForm.controls['categoryId'].hasError('required') && recipeForm.controls['categoryId'].touched">
+                    יש לבחור קטגוריה
+                </mat-error>
+                <button mat-icon-button matSuffix type="button" (click)="openCategoryDialog()" class="add-category-btn">
+                    <mat-icon>add_circle</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <!-- Category Management Section -->
+            <div class="category-management">
+                <h3 class="category-management-title">ניהול קטגוריות</h3>
+                <div class="category-list">
+                    <div *ngFor="let category of categories" class="category-item">
+                        <span>{{ category.categoryName }}</span>
+                        <div class="category-actions">
+                            <button mat-icon-button type="button" (click)="editCategory(category)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button type="button" (click)="deleteCategory(category.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label>תיאור המתכון:</mat-label>
+            <textarea 
+                matInput 
+                formControlName="recipeDescription" 
+                rows="5" 
+                class="min-h-20"
+                required></textarea>
+            <mat-error *ngIf="recipeForm.controls['recipeDescription'].hasError('required') && recipeForm.controls['recipeDescription'].touched">
+                חסר תיאור
+            </mat-error>
+            <mat-error *ngIf="recipeForm.controls['recipeDescription'].hasError('minlength') && recipeForm.controls['recipeDescription'].touched">
+                תיאור קצר מידי
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label>מרכיבים:</mat-label>
+            <textarea 
+                matInput 
+                formControlName="ingredients" 
+                rows="8" 
+                class="min-h-32"
+                placeholder="כל מרכיב בשורה חדשה"
+                required></textarea>
+            <mat-error *ngIf="recipeForm.controls['ingredients'].hasError('required') && recipeForm.controls['ingredients'].touched">
+                חסרים מרכיבים
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="w-full">
+            <mat-label>הוראות הכנה:</mat-label>
+            <textarea 
+                matInput 
+                formControlName="instructions" 
+                rows="10" 
+                class="min-h-40"
+                placeholder="הוראות הכנה מפורטות"
+                required></textarea>
+            <mat-error *ngIf="recipeForm.controls['instructions'].hasError('required') && recipeForm.controls['instructions'].touched">
+                חסרות הוראות הכנה
+            </mat-error>
+        </mat-form-field>
+
+        <div class="flex flex-wrap gap-4">
+            <mat-form-field appearance="outline" class="w-1/3">
+                <mat-label>זמן הכנה (דקות):</mat-label>
+                <input matInput formControlName="prepTimeMinutes" type="number" min="0" required>
+                <mat-error *ngIf="recipeForm.controls['prepTimeMinutes'].hasError('required') && recipeForm.controls['prepTimeMinutes'].touched">
+                    חסר זמן הכנה
+                </mat-error>
+                <mat-error *ngIf="recipeForm.controls['prepTimeMinutes'].hasError('min') && recipeForm.controls['prepTimeMinutes'].touched">
+                    ערך לא תקין
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-1/3">
+                <mat-label>זמן בישול (דקות):</mat-label>
+                <input matInput formControlName="cookTimeMinutes" type="number" min="0" required>
+                <mat-error *ngIf="recipeForm.controls['cookTimeMinutes'].hasError('required') && recipeForm.controls['cookTimeMinutes'].touched">
+                    חסר זמן בישול
+                </mat-error>
+                <mat-error *ngIf="recipeForm.controls['cookTimeMinutes'].hasError('min') && recipeForm.controls['cookTimeMinutes'].touched">
+                    ערך לא תקין
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="w-1/3">
+                <mat-label>מספר מנות:</mat-label>
+                <input matInput formControlName="servings" type="number" min="1" required>
+                <mat-error *ngIf="recipeForm.controls['servings'].hasError('required') && recipeForm.controls['servings'].touched">
+                    חסר מספר מנות
+                </mat-error>
+                <mat-error *ngIf="recipeForm.controls['servings'].hasError('min') && recipeForm.controls['servings'].touched">
+                    ערך לא תקין
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- Recipe Image - Keeping your original image handling approach -->
+        <div class="form-group image-upload-section mt-4 mb-4">
+            <label class="block mb-2 font-medium">תמונת המתכון</label>
+            
+            <div class="image-upload-container">
+                <input 
+                    #fileInput
+                    type="file" 
+                    accept="image/*" 
+                    style="display: none;"
+                    (change)="onFileSelected($event)"
+                >
+                
+                <div class="image-preview-container" *ngIf="imagePreview">
+                    <img [src]="imagePreview" alt="Recipe Preview" class="image-preview max-h-64 mb-2">
+                    <button type="button" mat-stroked-button color="warn" (click)="removeImage()">
+                        הסר תמונה
+                    </button>
+                </div>
+                
+                <button 
+                    type="button" 
+                    mat-raised-button
+                    color="primary"
+                    (click)="triggerFileInput()"
+                    *ngIf="!imagePreview"
+                >
+                    בחר תמונה
+                </button>
+                
+                <p class="image-description text-gray-600 text-sm mt-2" *ngIf="!imagePreview">
+                    העלה תמונה איכותית של המתכון (מומלץ בגודל של לפחות 800x600)
+                </p>
+            </div>
+        </div>
+
+        <div class="flex gap-4 mt-4">
+            <button mat-raised-button color="primary" type="submit" [disabled]="recipeForm.invalid || isLoading">
+                {{ isLoading ? 'שומר...' : (isNewRecipe ? 'הוסף מתכון' : 'עדכן מתכון') }}
+            </button>
+            <button mat-raised-button type="button" (click)="cancel()">
+                חזרה לדף המתכונים
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Category Dialog Template -->
+<ng-template #categoryDialog>
+    <div class="category-dialog">
+        <h2 mat-dialog-title>{{ isEditMode ? 'עריכת קטגוריה' : 'הוספת קטגוריה חדשה' }}</h2>
+        <mat-dialog-content>
+            <form [formGroup]="categoryForm">
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>שם הקטגוריה:</mat-label>
+                    <input matInput formControlName="categoryName" required>
+                    <mat-error *ngIf="categoryForm.controls['categoryName'].hasError('required')">
+                        יש להזין שם קטגוריה
+                    </mat-error>
+                </mat-form-field>
+            </form>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>ביטול</button>
+            <button mat-raised-button color="primary" (click)="saveCategory()" [disabled]="categoryForm.invalid">
+                שמור
+            </button>
+        </mat-dialog-actions>
+    </div>
+</ng-template>

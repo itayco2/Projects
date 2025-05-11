@@ -103,14 +103,12 @@ export class WorkshopNewComponent implements OnInit {
             
             // You'll need to create this method in your service
             await this.workshopService.addWorkshopWithFormData(formData);
-            console.log(this.workshopModel);
             
             
             this.notifyService.success('סדנא נוצרה בהצלחה');
             this.router.navigateByUrl('/workshops');
         }
         catch(err) {
-            console.log(err);
             this.notifyService.error('אירעה שגיאה ביצירת סדנא');
         }
     }

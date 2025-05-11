@@ -97,4 +97,12 @@ export class WorkshopListComponent implements OnInit {
     }
     
 
+    calculateEndTime(startDate: Date): Date {
+        if (!startDate) return null;
+        
+        const endDate = new Date(startDate);
+        endDate.setHours(endDate.getHours() + 3);
+        return endDate;
+    }
+
 }

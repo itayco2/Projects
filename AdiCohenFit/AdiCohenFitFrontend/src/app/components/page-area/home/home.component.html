@@ -8,7 +8,7 @@
 
         <div class="video-text">
             <header class="homepage-header">
-                <h1>סדנאות הפיצה</h1>
+                <h1>סדנת הפיצה</h1>
                 <h1>של עדי כהן</h1>
                 <h2 class="subtitle">למדו להכין בצק שכולם ידברו עליו</h2>
             </header>
@@ -18,7 +18,7 @@
                         <span class="button-text">סדנאות</span>
                     </button>
                 </a>
-                <a routerLink="/nutrition">
+                <a (click)="scrollToAboutMe()">
                     <button class="cta-button outline">
                         <span class="button-text">קצת עלי</span>
                     </button>
@@ -27,5 +27,7 @@
         </div>
     </div>
 </div>
-
+<app-reviews-carousel></app-reviews-carousel>
 <app-workshop-list id="workshops"></app-workshop-list>
+<app-workshop-benefits></app-workshop-benefits>
+<app-nutrition id="AboutMe"></app-nutrition>

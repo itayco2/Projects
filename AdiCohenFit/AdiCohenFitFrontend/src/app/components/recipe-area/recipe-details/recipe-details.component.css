@@ -1,0 +1,398 @@
+/* Main Container */
+body{
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+}
+.recipe-details-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  /* Loading State */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+  }
+  
+  .loading-text {
+    margin-top: 16px;
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Recipe Header with Background Image */
+  .recipe-header {
+    height: 300px;
+    border-radius: 12px;
+    margin-bottom: 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+  }
+  
+  .header-content {
+    width: 100%;
+    padding: 30px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .recipe-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+  
+  .recipe-category {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .recipe-category mat-icon {
+    margin-left: 8px;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  /* Info Bar */
+  .recipe-info-bar {
+    background-color: white;
+    border-radius: 8px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    margin-right: 12px;
+  }
+  
+  .info-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .info-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .info-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #e0e0e0;
+  }
+  
+  /* Main Content */
+  .recipe-main {
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .recipe-description-section {
+    margin-bottom: 30px;
+  }
+  
+  .recipe-description-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+  
+  .recipe-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Two Column Layout */
+  .recipe-columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  /* Ingredients */
+  .ingredients-card {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-title mat-icon {
+    margin-left: 10px;
+    color: #ff6b6b;
+  }
+  
+  .ingredients-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ingredients-list li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dashed #e0e0e0;
+  }
+  
+  .ingredients-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .check-icon {
+    color: #4caf50;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  /* Instructions */
+  .instructions-section {
+    flex: 1.5;
+  }
+  
+  .section-header {
+    margin-bottom: 24px;
+  }
+  
+  .instructions-list {
+    list-style-type: none;
+    padding: 0;
+    counter-reset: step-counter;
+  }
+  
+  .instruction-step {
+    display: flex;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  
+  .step-number {
+    background-color: #ff6b6b;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    background-color: #f9f9f9;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+  }
+  
+  .step-content p {
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .action-button {
+    min-width: 140px;
+  }
+  
+  .action-button mat-icon {
+    margin-left: 8px;
+  }
+  
+  /* Save Button Animation */
+  .save-button {
+    transition: all 0.3s ease;
+  }
+  
+  .save-button:hover mat-icon {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .save-button mat-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  /* No Recipe Found */
+  .no-recipe-container {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 40px;
+  }
+  
+  .no-recipe-icon {
+    font-size: 60px;
+    height: 60px;
+    width: 60px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .action-buttons {
+      display: none;
+    }
+    
+    .recipe-header {
+      height: auto;
+      background-image: none !important;
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    
+    .header-content {
+      color: black;
+    }
+    
+    .recipe-title {
+      text-shadow: none;
+    }
+    
+    .recipe-info-bar {
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    
+    .recipe-main {
+      box-shadow: none;
+    }
+    
+    .step-number {
+      border: 1px solid #333;
+      background-color: white;
+      color: #333;
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .recipe-header {
+      height: 200px;
+    }
+    
+    .recipe-title {
+      font-size: 1.8rem;
+    }
+    
+    .recipe-info-bar {
+      padding: 15px;
+    }
+    
+    .info-item {
+      padding: 10px;
+      width: 45%;
+    }
+    
+    .info-divider {
+      display: none;
+    }
+    
+    .recipe-columns {
+      flex-direction: column;
+    }
+    
+    .recipe-main {
+      padding: 20px;
+    }
+    
+    .action-button {
+      flex-grow: 1;
+    }
+  }
+  
+  /* Additional Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .recipe-content {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .ingredients-list li, .instruction-step {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .ingredients-list li:nth-child(1) { animation-delay: 0.1s; }
+  .ingredients-list li:nth-child(2) { animation-delay: 0.2s; }
+  .ingredients-list li:nth-child(3) { animation-delay: 0.3s; }
+  .ingredients-list li:nth-child(4) { animation-delay: 0.4s; }
+  .ingredients-list li:nth-child(5) { animation-delay: 0.5s; }
+  .ingredients-list li:nth-child(6) { animation-delay: 0.6s; }
+  .ingredients-list li:nth-child(7) { animation-delay: 0.7s; }
+  .ingredients-list li:nth-child(8) { animation-delay: 0.8s; }
+  .ingredients-list li:nth-child(9) { animation-delay: 0.9s; }
+  .ingredients-list li:nth-child(10) { animation-delay: 1s; }
+  
+  .instruction-step:nth-child(1) { animation-delay: 0.3s; }
+  .instruction-step:nth-child(2) { animation-delay: 0.4s; }
+  .instruction-step:nth-child(3) { animation-delay: 0.5s; }
+  .instruction-step:nth-child(4) { animation-delay: 0.6s; }
+  .instruction-step:nth-child(5) { animation-delay: 0.7s; }
+  .instruction-step:nth-child(6) { animation-delay: 0.8s; }
+  .instruction-step:nth-child(7) { animation-delay: 0.9s; }
+  .instruction-step:nth-child(8) { animation-delay: 1s; }
+  .instruction-step:nth-child(9) { animation-delay: 1.1s; }
+  .instruction-step:nth-child(10) { animation-delay: 1.2s; }

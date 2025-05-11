@@ -1,0 +1,95 @@
+/* Form styles */
+form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.w-full {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* Category management section */
+.category-section {
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+.category-management {
+    margin-top: 1.5rem;
+}
+
+.category-management-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.category-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.category-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Button styles */
+button[type="submit"] {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.add-category-btn {
+    color: #4caf50;
+}
+
+/* Dialog styles */
+.category-dialog {
+    width: 400px;
+    max-width: 90vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 1rem;
+    }
+    
+    .category-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .category-actions {
+        margin-top: 0.5rem;
+    }
+}

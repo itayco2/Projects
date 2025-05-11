@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-user-menu',
+  standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './user-menu.component.html',
   styleUrl: './user-menu.component.css'
@@ -75,76 +76,94 @@ export class UserMenuComponent implements OnInit, OnDestroy {
     }
     
     // Create dropdown directly in the body
-// Create dropdown directly in the body
-private createDropdownInBody(): void {
-    // Remove existing dropdown if any
-    if (this.dropdownElement) {
-        document.body.removeChild(this.dropdownElement);
-    }
-    
-    // Create new dropdown element
-    this.dropdownElement = this.renderer.createElement('div');
-    this.renderer.addClass(this.dropdownElement, 'body-dropdown-menu');
-    
-    // Add dropdown content
-    this.dropdownElement.innerHTML = `
-        <div class="dropdown-menu">
-            <div class="dropdown-option">
-                <a class="logout-link">Logout</a>
+    private createDropdownInBody(): void {
+        // Remove existing dropdown if any
+        if (this.dropdownElement) {
+            document.body.removeChild(this.dropdownElement);
+        }
+        
+        // Create new dropdown element
+        this.dropdownElement = this.renderer.createElement('div');
+        this.renderer.addClass(this.dropdownElement, 'body-dropdown-menu');
+        
+        // Add dropdown content with Saved Recipes option
+        this.dropdownElement.innerHTML = `
+            <div class="dropdown-menu">
+                <div class="dropdown-option">
+                    <a class="saved-recipes-link"> המתכונים שלי</a>
+                </div>
+                <div class="dropdown-option">
+                    <a class="logout-link">התנתק</a>
+                </div>
             </div>
-        </div>
-    `;
-    
-    // Add click event to logout link
-    const logoutLink = this.dropdownElement.querySelector('.logout-link');
-    this.renderer.listen(logoutLink, 'click', () => {
-        this.logOut();
-    });
-    
-    // Position the dropdown
-    const userMenuElement = this.elementRef.nativeElement.querySelector('.user-info');
-    if (userMenuElement) {
-        const rect = userMenuElement.getBoundingClientRect();
+        `;
         
-        // Set position styles - adding offset to move down and left
-        this.renderer.setStyle(this.dropdownElement, 'position', 'fixed');
-        this.renderer.setStyle(this.dropdownElement, 'top', `${rect.bottom + 15}px`); // Move down by 15px
-        this.renderer.setStyle(this.dropdownElement, 'right', `${window.innerWidth - rect.right + -30}px`); // Move left by 20px
-        this.renderer.setStyle(this.dropdownElement, 'z-index', '99999');
+        // Add click event to saved recipes link
+        const savedRecipesLink = this.dropdownElement.querySelector('.saved-recipes-link');
+        this.renderer.listen(savedRecipesLink, 'click', () => {
+            this.navigateToSavedRecipes();
+        });
         
-        // Add dropdown styling
-        this.renderer.setStyle(this.dropdownElement, 'background-color', 'white');
-        this.renderer.setStyle(this.dropdownElement, 'border', '1px solid #ccc');
-        this.renderer.setStyle(this.dropdownElement, 'border-radius', '4px');
-        this.renderer.setStyle(this.dropdownElement, 'box-shadow', '0 4px 12px rgba(0, 0, 0, 0.2)');
-        this.renderer.setStyle(this.dropdownElement, 'width', '150px');
-        this.renderer.setStyle(this.dropdownElement, 'padding', '10px');
-    }
-    
-    // Add the dropdown to the document body
-    document.body.appendChild(this.dropdownElement);
-    
-    // Create click handler to close dropdown when clicking outside
+        // Add click event to logout link
+        const logoutLink = this.dropdownElement.querySelector('.logout-link');
+        this.renderer.listen(logoutLink, 'click', () => {
+            this.logOut();
+        });
+        
+        // Position the dropdown
+        const userMenuElement = this.elementRef.nativeElement.querySelector('.user-info');
+        if (userMenuElement) {
+            const rect = userMenuElement.getBoundingClientRect();
+            
+            // Set position styles - adding offset to move down and left
+            this.renderer.setStyle(this.dropdownElement, 'position', 'fixed');
+            this.renderer.setStyle(this.dropdownElement, 'top', `${rect.bottom + 15}px`); // Move down by 15px
+            this.renderer.setStyle(this.dropdownElement, 'right', `${window.innerWidth - rect.right + -30}px`); // Move left by 20px
+            this.renderer.setStyle(this.dropdownElement, 'z-index', '99999');
+            
+            // Add dropdown styling
+            this.renderer.setStyle(this.dropdownElement, 'background-color', 'white');
+            this.renderer.setStyle(this.dropdownElement, 'border', '1px solid #ccc');
+            this.renderer.setStyle(this.dropdownElement, 'border-radius', '4px');
+            this.renderer.setStyle(this.dropdownElement, 'box-shadow', '0 4px 12px rgba(0, 0, 0, 0.2)');
+            this.renderer.setStyle(this.dropdownElement, 'width', '150px');
+            this.renderer.setStyle(this.dropdownElement, 'padding', '10px');
+        }
+        
+        // Add the dropdown to the document body
+        document.body.appendChild(this.dropdownElement);
+        
+        // Create click handler to close dropdown when clicking outside
     setTimeout(() => {
-        const clickHandler = (event: MouseEvent) => {
-            if (!this.dropdownElement.contains(event.target as Node) && 
-                !this.elementRef.nativeElement.contains(event.target as Node)) {
-                // Click outside dropdown and menu
-                this.isMenuOpen = false;
-                document.body.removeChild(this.dropdownElement);
-                this.dropdownElement = null;
-                document.removeEventListener('click', clickHandler);
-            }
-        };
-        document.addEventListener('click', clickHandler);
+         const clickHandler = (event: MouseEvent) => {
+        if (this.dropdownElement && 
+            !this.dropdownElement.contains(event.target as Node) && 
+            !this.elementRef.nativeElement.contains(event.target as Node)) {
+            this.isMenuOpen = false;
+            document.body.removeChild(this.dropdownElement);
+            this.dropdownElement = null;
+            document.removeEventListener('click', clickHandler);
+        }
+    };
+    document.addEventListener('click', clickHandler);
     });
-}
+    }
+
+    // Navigate to saved recipes page
+    public navigateToSavedRecipes(): void {
+        this.isMenuOpen = false;
+        if (this.dropdownElement) {
+            document.body.removeChild(this.dropdownElement);
+            this.dropdownElement = null;
+        }
+        this.router.navigate(['/saved-recipes']);
+    }
 
     // Method to log out the user
     public logOut(): void {
         localStorage.clear();
         this.userService.logout();
-        this.notifyService.success("Have a nice day!");
+        this.notifyService.success("!שיהיה לך המשך יום נעים");
         this.router.navigate(['/home']);
     }
 }

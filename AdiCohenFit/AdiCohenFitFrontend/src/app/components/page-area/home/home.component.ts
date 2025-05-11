@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
 import { WorkshopListComponent } from "../../workshop-area/workshop-list/workshop-list.component";
+import { NutritionComponent } from "../../nutrition-area/nutrition/nutrition.component";
+import { WorkshopBenefitsComponent } from "../../workshop-area/workshop-benefits/workshop-benefits.component";
+import { ReviewsCarouselComponent } from "../../workshop-area/reviews-carousel/reviews-carousel.component";
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, CommonModule, WorkshopListComponent],
+  imports: [CommonModule, WorkshopListComponent, NutritionComponent, WorkshopBenefitsComponent, ReviewsCarouselComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -25,10 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         // Force mute the video
         video.muted = true;
         
-        // Make sure autoplay works
-        video.play().catch(error => {
-          console.log('Autoplay failed:', error);
-        });
+
         
         // Add event listener to ensure it stays muted
         video.addEventListener('volumechange', () => {
@@ -45,4 +44,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
+    public scrollToAboutMe() {
+        const element = document.getElementById('AboutMe');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
   }

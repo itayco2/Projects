@@ -33,6 +33,7 @@
   border-radius: 4px;
   background-color: #f8f8f8;
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 .dropdown-option:hover {
@@ -46,6 +47,7 @@
   display: block;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .dropdown-menu a:hover {
@@ -56,6 +58,7 @@
   cursor: pointer;
   padding-right: 5px;
 }
+
 .dropdown-menu-wrapper {
     /* We'll set position, top, right via JavaScript */
     /* The default position in case JavaScript fails */
@@ -69,4 +72,31 @@ a {
   color: #3f5a4b;
   text-decoration: none;
   padding: 5px;
+}
+
+/* Body dropdown menu styling */
+.body-dropdown-menu {
+  direction: rtl;
+}
+
+.saved-recipes-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saved-recipes-link::before {
+  content: "📂";
+  margin-left: 5px;
+}
+
+.logout-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-link::before {
+  content: "🚪";
+  margin-left: 5px;
 }

@@ -1,0 +1,78 @@
+<!-- reviews-carousel.component.html -->
+<div class="reviews-slider">
+  <!-- Previous/Next controls -->
+  <button class="slider-control prev-btn" (click)="previousReview()" aria-label="Previous review">❮</button>
+  <button class="slider-control next-btn" (click)="nextReview()" aria-label="Next review">❯</button>
+  
+  <div class="reviews-container">
+    <!-- Previous Review (Left Side) -->
+    <div class="review-item side-review left-review">
+      <div class="review-image">
+        <img [src]="reviews[getPreviousIndex()].image" alt="Customer">
+      </div>
+      
+      <h4 class="reviewer-name">{{ reviews[getPreviousIndex()].name }}</h4>
+      
+      <div class="star-rating">
+        <span *ngFor="let star of getStars(reviews[getPreviousIndex()].rating)" class="star">
+          <span *ngIf="star === 1" class="filled-star">★</span>
+          <span *ngIf="star === 0" class="empty-star">☆</span>
+        </span>
+      </div>
+      
+      <p class="review-text">
+        "{{ reviews[getPreviousIndex()].text }}"
+      </p>
+    </div>
+    
+    <!-- Current Review (Center, Featured) -->
+    <div class="review-item center-review">
+      <div class="review-image">
+        <img [src]="reviews[currentReviewIndex].image" alt="Customer">
+      </div>
+      
+      <h4 class="reviewer-name">{{ reviews[currentReviewIndex].name }}</h4>
+      
+      <div class="star-rating">
+        <span *ngFor="let star of getStars(reviews[currentReviewIndex].rating)" class="star">
+          <span *ngIf="star === 1" class="filled-star">★</span>
+          <span *ngIf="star === 0" class="empty-star">☆</span>
+        </span>
+      </div>
+      
+      <p class="review-text">
+        "{{ reviews[currentReviewIndex].text }}"
+      </p>
+    </div>
+    
+    <!-- Next Review (Right Side) -->
+    <div class="review-item side-review right-review">
+      <div class="review-image">
+        <img [src]="reviews[getNextIndex()].image" alt="Customer">
+      </div>
+      
+      <h4 class="reviewer-name">{{ reviews[getNextIndex()].name }}</h4>
+      
+      <div class="star-rating">
+        <span *ngFor="let star of getStars(reviews[getNextIndex()].rating)" class="star">
+          <span *ngIf="star === 1" class="filled-star">★</span>
+          <span *ngIf="star === 0" class="empty-star">☆</span>
+        </span>
+      </div>
+      
+      <p class="review-text">
+        "{{ reviews[getNextIndex()].text }}"
+      </p>
+    </div>
+  </div>
+  
+  <!-- Navigation dots -->
+  <div class="navigation-dots">
+    <span 
+      *ngFor="let review of reviews; let i = index" 
+      class="dot"
+      [class.active]="i === currentReviewIndex"
+      (click)="currentReviewIndex = i; resetTimer()">
+    </span>
+  </div>
+</div>

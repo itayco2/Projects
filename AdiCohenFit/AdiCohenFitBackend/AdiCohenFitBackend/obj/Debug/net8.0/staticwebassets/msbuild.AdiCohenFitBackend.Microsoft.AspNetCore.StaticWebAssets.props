@@ -1,5 +1,41 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>assets/images/10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n2m112w9or</Fingerprint>
+      <Integrity>AbGZ+DVkVEfq5g4ut/HLRK2Lk+gPgh4Innxd4OHVicI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>assets/images/3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kfhg6k49db</Fingerprint>
+      <Integrity>QNI/dK/9zYtkCRn69qQdAOpzwuVGU4ZjA+z0fpZsbWw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>AdiCohenFitBackend</SourceId>
@@ -125,6 +161,78 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>images/7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>u9i5874gs5</Fingerprint>
+      <Integrity>PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP+N2Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>images/a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kz23nuqaz2</Fingerprint>
+      <Integrity>IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>images/de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>kz23nuqaz2</Fingerprint>
+      <Integrity>IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AdiCohenFitBackend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AdiCohenFitBackend</BasePath>
+      <RelativePath>images/f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xvtc36tgsr</Fingerprint>
+      <Integrity>s1JZigOBytigjsRyRHSl3Bs4tb6ZyeejJIga7/Pk6Do=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

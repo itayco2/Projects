@@ -1,0 +1,182 @@
+/* Main container styling */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Full width form fields */
+  .w-full {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Flex layout for smaller inputs */
+  .flex {
+    display: flex;
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .gap-4 {
+    gap: 16px;
+  }
+  
+
+  
+  /* Margin utilities */
+  .mt-4 {
+    margin-top: 16px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 16px;
+  }
+  
+  .mb-2 {
+    margin-bottom: 8px;
+  }
+  
+  .mt-2 {
+    margin-top: 8px;
+  }
+  
+  /* Text utilities */
+  .block {
+    display: block;
+  }
+  
+  .font-medium {
+    font-weight: 500;
+  }
+  
+  .text-gray-600 {
+    color: #666;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  /* Min height for textareas */
+  .min-h-20 {
+    min-height: 80px;
+  }
+  
+  .min-h-32 {
+    min-height: 128px;
+  }
+  
+  .min-h-40 {
+    min-height: 160px;
+  }
+  
+  /* Image upload section */
+  .image-upload-section {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .image-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .image-preview-container {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .image-preview {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .max-h-64 {
+    max-height: 256px;
+  }
+  
+  /* Category management section */
+  .category-section {
+    margin-bottom: 16px;
+  }
+  
+  .category-management {
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+  }
+  
+  .category-management-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .category-actions {
+    display: flex;
+    gap: 4px;
+  }
+  
+  .add-category-btn {
+    margin-right: -8px;
+  }
+  
+  /* RTL specific adjustments */
+  [dir="rtl"] .mat-form-field-infix {
+    text-align: right;
+  }
+  
+  /* Button spacing in RTL context */
+  [dir="rtl"] button + button {
+    margin-right: 8px;
+    margin-left: 0;
+  }
+  
+  /* Category dialog */
+  .category-dialog {
+    direction: rtl;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+    }
+    
+    .gap-4 {
+      gap: 8px;
+    }
+    
+
+  }

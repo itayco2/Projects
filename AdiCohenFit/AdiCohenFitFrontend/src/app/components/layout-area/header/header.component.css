@@ -3,33 +3,36 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    position: sticky; /* changed from relative */
-    top: 0; /* stick to top */
-    z-index: 1000; /* make sure it’s above everything else */
-    background-color: white; /* optional, to avoid transparency while scrolling */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
     overflow: visible !important;
+    flex-wrap: wrap;
   }
-  
   
   /* Left section (Phone & Social) */
   .left-section {
     display: flex;
-    overflow: visible; /* This allows child elements to overflow */
-    position: relative;
     align-items: center;
     gap: 12px;
-  }
-
-  app-user-menu {
     position: relative;
-    overflow: visible;
+    overflow: visible !important;
+    flex-wrap: wrap;
   }
   
-  /* Center section for logo and navigation together */
+  app-user-menu {
+    position: relative;
+    z-index: 100;
+    overflow: visible !important;
+  }
+  
+  /* Center section for logo and navigation */
   .center-section {
     display: flex;
     align-items: center;
-    gap: 30px; /* Space between logo and navigation */
+    gap: 30px;
+    flex-wrap: wrap;
   }
   
   /* Phone button styling */
@@ -41,6 +44,7 @@
     text-decoration: none;
     font-size: 14px;
     transition: background-color 0.2s;
+    white-space: nowrap; /* Prevents text wrapping */
   }
   
   .phone-button:hover {
@@ -63,13 +67,11 @@
     background-color: #444;
   }
   
-
-  
   /* Navigation styling */
   .navigation {
     display: flex;
     gap: 25px;
-    align-items: center; /* Vertically align with logo */
+    align-items: center;
   }
   
   .navigation a {
@@ -95,56 +97,111 @@
     align-items: center;
   }
   
-  .logo img {
-    height: 80px; /* Adjust the height as needed */
-    width: auto; /* This maintains the aspect ratio */
-    max-width: 100%; /* Ensures the logo doesn't overflow its container */
+  .logo img, .logo-image {
+    height: 70px;
+    width: auto;
+    max-width: 100%;
+    transition: height 0.3s ease; /* Adding transition for smooth resize */
   }
   
-  /* Responsive styles */
-  @media (max-width: 768px) {
+  /* RTL support */
+  [dir="rtl"] .center-section {
+    flex-direction: row-reverse;
+  }
+  
+  /* Responsive styles - keeping same layout, just resizing */
+  @media (max-width: 992px) {
+    .header-container {
+      padding: 12px 20px;
+    }
+    
     .center-section {
-      flex-direction: column;
-      gap: 15px;
+      gap: 20px;
+    }
+    
+    .logo img, .logo-image {
+      height: 70px;
     }
     
     .navigation {
-      display: none;
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 10px 15px;
+      justify-content: center;
     }
     
-    .header-container {
-      padding: 15px 20px;
+    .left-section {
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .center-section {
+      gap: 15px;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .logo img, .logo-image {
+      height: 60px;
+    }
+    
+    .navigation {
+      gap: 12px;
+    }
+    
+    .navigation a {
+      font-size: 14px;
+    }
+    
+    .phone-button {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
     }
   }
   
-  /* For RTL support */
-  [dir="rtl"] .center-section {
-    flex-direction: row-reverse; /* Reverse the order for RTL */
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    position: relative;
-    z-index: 10;
-    overflow: visible !important; /* Ensure dropdown can appear outside */
-  }
-  
-  
-  /* Left section (Phone & Social) */
-  .left-section {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-    overflow: visible !important; /* Ensure dropdown can appear outside */
-  }
-  
-  /* Add this to ensure dropdowns can be visible */
-  app-user-menu {
-    position: relative;
-    z-index: 100; /* Higher than header */
-    overflow: visible !important; /* Critical - allow the dropdown to be visible */
+  @media (max-width: 480px) {
+    .header-container {
+      padding: 8px 10px;
+    }
+    
+    .left-section {
+      width: 100%;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .center-section {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .logo img, .logo-image {
+      height: 50px;
+    }
+    
+    .navigation {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    .phone-button {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    
+    .social-icon {
+      width: 36px;
+      height: 36px;
+    }
   }

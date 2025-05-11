@@ -133,7 +133,6 @@ export class WorkshopEditComponent implements OnInit {
             this.notifyService.success('סדנא עודכנה');
             this.router.navigateByUrl('/workshops');
         } catch (err) {
-            console.log(err);
             this.notifyService.error('אירעה שגיאה בעריכת הסדנא');
         }
     }

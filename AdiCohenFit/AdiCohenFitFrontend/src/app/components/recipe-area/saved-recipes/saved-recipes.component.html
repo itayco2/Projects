@@ -1,0 +1,71 @@
+<div class="saved-recipes-container" dir="rtl">
+    <div class="page-header">
+      <h1 class="page-title">ספר המתכונים שלי</h1>
+      <a routerLink="/Recipe" class="browse-recipes-btn">לרשימת המתכונים</a>
+    </div>
+    
+    <!-- Loading state -->
+    <div *ngIf="isLoading" class="loading-container">
+      <div class="spinner"></div>
+      <p class="loading-text">מכין את ספר המתכונים שלך</p>
+    </div>
+    
+    <!-- Error state -->
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+      <button (click)="loadSavedRecipes()" class="retry-button">נסה שנית</button>
+    </div>
+    
+    <!-- Empty state -->
+    <div *ngIf="!isLoading && !error && savedRecipes().length === 0" class="empty-state">
+      <div class="empty-state-icon">📚</div>
+      <p>עדיין אין לך מתכונים שמורים</p>
+    </div>
+    
+    <!-- Recipes grid -->
+    <div *ngIf="!isLoading && savedRecipes().length > 0" class="recipes-grid">
+      <div *ngFor="let savedRecipe of savedRecipes()" class="recipe-card">
+        <div class="recipe-link">
+          <a [routerLink]="['/Recipe/details', savedRecipe.recipeId]">
+            <!-- Recipe image with background -->
+            <div class="recipe-image" [style.background-image]="getBackgroundImageStyle(savedRecipe.recipe)">
+              <!-- Category tag if available -->
+              <div *ngIf="getCategoryName(savedRecipe.recipe?.categoryId)" class="category-tag">
+                {{ getCategoryName(savedRecipe.recipe.categoryId) }}
+            </div>
+              
+              <!-- Hidden image for accessibility -->
+              <img [src]="getImageUrl(savedRecipe.recipe)" 
+                   [alt]="savedRecipe.recipe?.recipeName || 'Recipe image'"
+                   (error)="handleImageError($event, savedRecipe.recipe?.recipeName || 'Unknown recipe')">
+            </div>
+            
+            <div class="recipe-info">
+              <h3 class="recipe-title">{{ savedRecipe.recipe?.recipeName || 'Untitled Recipe' }}</h3>
+              
+              <p class="recipe-description">
+                {{ savedRecipe.recipe?.recipeDescription || 'No description available for this recipe.' }}
+              </p>
+              
+              <div class="recipe-meta">
+                <span class="time-info">
+                  <i class="time-icon"></i>
+                  {{ getTotalTime(savedRecipe.recipe?.prepTimeMinutes, savedRecipe.recipe?.cookTimeMinutes) }} min
+                </span>
+                
+                <span class="saved-date">
+                  Saved {{ getFormattedDate(savedRecipe.savedAt) }}
+                </span>
+              </div>
+            </div>
+          </a>
+          
+          <div class="recipe-actions">
+            <button class="unsave-btn" (click)="removeSavedRecipe(savedRecipe.recipeId, $event)">
+              <i class="heart-icon filled"></i> מחיקה מהמתכונים השמורים
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

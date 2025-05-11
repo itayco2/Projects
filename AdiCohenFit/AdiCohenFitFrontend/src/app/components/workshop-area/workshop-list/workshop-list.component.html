@@ -1,6 +1,6 @@
 <div class="workshop-section" dir="rtl">
-    <h2 class="section-title">רשימת סדנאות</h2>
-    <p class="section-subtitle">תבואו להתנסות ממגוון הסדנאות שלנו</p>
+    <h1 class="section-title">לסדנאות הבאות </h1>
+    <p class="section-subtitle">שומר מקום</p>
     
 
     
@@ -27,7 +27,10 @@
               <p class="workshop-description">{{ workshop.workshopDescription }}</p> 
               <p class="workshop-places-left">מקומות שנשארו: {{ workshop.workshopPlacesLeft }}</p>
               <p class="workshop-price">מחיר: {{ workshop.workshopPrice }} ₪</p>
-              <p class="workshop-date">תאריך: {{ workshop.workshopDate |date: 'dd/MM/yyyy HH:mm' }}</p>
+              <p class="workshop-date">תאריך: {{ workshop.workshopDate |date: 'dd/MM/yyyy' }}</p>
+              <p class="workshop-date">שעות: {{ workshop.workshopDate | date: 'HH:mm' }} - {{ calculateEndTime(workshop.workshopDate) | date: 'HH:mm' }}</p>
+
+              
               
               <!-- Regular user buttons -->
               <div *ngIf="!canAddWorkshop && workshop.workshopPlacesLeft > 0">

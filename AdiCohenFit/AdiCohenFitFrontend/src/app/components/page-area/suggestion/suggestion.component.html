@@ -1,38 +1,108 @@
-<!DOCTYPE html dir="rtl">
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>המלצות על מיקסר Davo</title>
-</head>
 <body>
-
-<div class="container">
-    <h1>המלצות על מיקסר Davo מקצועי</h1>
-
-    <img src="assets/images/Davo.jpg" alt="מיקסר Davo" class="mixer-image">
-
-    <p>
-        מיקסר Davo נחשב לבחירה מעולה עבור כל מי שאוהב לאפות ולבשל. המיקסר משלב עוצמה, נוחות ותוצאה מקצועית.
-    </p>
-
-    <h3>תכונות עיקריות:</h3>
-    <ul>
-        <li>מנוע עוצמתי של 1500W</li>
-        <li>קערת נירוסטה 6.5 ליטר</li>
-        <li>6 דרגות מהירות + פולס</li>
-        <li>אביזרים כלולים: וו לישה, מקצף, מערבל שטוח</li>
-        <li>עיצוב מודרני עם בסיס יציב</li>
-    </ul>
-
-    <div class="reviews">
-        <h3>מה אומרים הלקוחות:</h3>
-        <p>⭐️⭐️⭐️⭐️⭐️ - "פשוט תענוג לעבוד איתו!" - נטע</p>
-        <p>⭐️⭐️⭐️⭐️ - "מעולה לבצקים כבדים, קל לניקוי." - רועי</p>
+    <header class="page-header">
+      <h1>המוצרים המומלצים שלנו</h1>
+      <p>מבחר מוצרים איכותיים במחירים מיוחדים עם קופוני הנחה בלעדיים</p>
+    </header>
+  
+    <div class="products-grid">
+      <!-- DSM5270 Davo Chic Mixer -->
+      <div class="product-card">
+        <div class="product-header">
+          <h2>מיקסר מקצועי DSM5270 Davo Chic</h2>
+        </div>
+        <div class="product-image">
+          <img src="/assets/images/Davo.jpg" alt="מיקסר מקצועי DSM5270 Davo Chic">
+        </div>
+        <div class="product-details">
+          <p class="product-description">
+            מיקסר מקצועי ועוצמתי מבית Davo Chic, עם עיצוב אלגנטי ופונקציונליות מתקדמת. מיקסר DSM5270 הוא הפתרון המושלם למטבח המודרני.
+          </p>
+          <div class="product-pricing">
+            <span class="original-price">מחיר מקורי: 2,290 ₪</span>
+            <span class="discount-info">הנחה: 300 ₪</span>
+            <span class="final-price">מחיר לאחר הנחה: 1,990 ₪</span>
+          </div>
+          <div class="coupon-section">
+            <div class="coupon-label">קוד קופון להנחה:</div>
+            <div class="coupon-code" (click)="copyCouponCode('עדי5270', $event)">עדי5270</div>
+          </div>
+          <a href="https://did.li/GYIIw" class="purchase-link">לפרטים ולרכישה</a>
+        </div>
+      </div>
+  
+      <!-- DSM5740 Mixer -->
+      <div class="product-card">
+        <div class="product-header">
+          <h2>מיקסר מקצועי DSM5740</h2>
+        </div>
+        <div class="product-image">
+          <img src="/assets/images/Davo2.jpg" alt="מיקסר מקצועי DSM5740">
+        </div>
+        <div class="product-details">
+          <p class="product-description">
+            מיקסר מקצועי עוצמתי עם ביצועים יוצאי דופן לאפייה מקצועית. עיצוב חדשני ומערכת הפעלה מתקדמת לחוויית אפייה מושלמת.
+          </p>
+          <div class="product-pricing">
+            <span class="original-price">מחיר מקורי: 3,590 ₪</span>
+            <span class="discount-info">הנחה: 300 ₪</span>
+            <span class="final-price">מחיר לאחר הנחה: 3,290 ₪</span>
+          </div>
+          <div class="coupon-section">
+            <div class="coupon-label">קוד קופון להנחה:</div>
+            <div class="coupon-code" (click)="copyCouponCode('adicohen5740', $event)">adicohen5740</div>
+          </div>
+          <a href="https://oig.co.il/product/5740/" class="purchase-link">לפרטים ולרכישה</a>
+        </div>
+      </div>
+  
+      <!-- DSM5745 Mixer -->
+      <div class="product-card">
+        <div class="product-header">
+          <h2>מיקסר מקצועי DSM5745 - קערת 8 ליטר</h2>
+        </div>
+        <div class="product-image">
+          <img src="/assets/images/Davo3.jpg" alt="מיקסר מקצועי DSM5745">
+        </div>
+        <div class="product-details">
+          <p class="product-description">
+            מיקסר מקצועי עם קערת ענק בנפח 8 ליטר, אידיאלי למטבחים מקצועיים וחובבי אפייה ברמה גבוהה. עוצמה וביצועים ללא פשרות.
+          </p>
+          <div class="product-pricing">
+            <span class="original-price">מחיר מקורי: 3,890 ₪</span>
+            <span class="discount-info">הנחה: 490 ₪</span>
+            <span class="final-price">מחיר לאחר הנחה: 3,400 ₪</span>
+          </div>
+          <div class="coupon-section">
+            <div class="coupon-label">קוד קופון להנחה:</div>
+            <div class="coupon-code" (click)="copyCouponCode('adicohen5745', $event)">adicohen5745</div>
+          </div>
+          <a href="https://oig.co.il/product/%d7%9e%d7%99%d7%a7%d7%a1%d7%a8-%d7%9e%d7%a7%d7%a6%d7%95%d7%a2%d7%99-dsm5745-%d7%a7%d7%a2%d7%a8%d7%aa-8-%d7%9c/" class="purchase-link">לפרטים ולרכישה</a>
+        </div>
+      </div>
+  
+      <!-- DAV1280 Ice Cream Maker -->
+      <div class="product-card">
+        <div class="product-header">
+          <h2>מכונת גלידה DAV1280</h2>
+        </div>
+        <div class="product-image">
+          <img src="/assets/images/Davo4.jpg" alt="מכונת גלידה DAV1280">
+        </div>
+        <div class="product-details">
+          <p class="product-description">
+            מכשיר מקצועי להכנת גלידה ביתית איכותית. קל לשימוש, מהיר ויעיל, הכינו גלידה טעימה בטעמים שאתם אוהבים בנוחות ביתכם.
+          </p>
+          <div class="product-pricing">
+            <span class="original-price">מחיר מקורי: 1,450 ₪</span>
+            <span class="discount-info">הנחה: 300 ₪</span>
+            <span class="final-price">מחיר לאחר הנחה: 1,150 ₪</span>
+          </div>
+          <div class="coupon-section">
+            <div class="coupon-label">קוד קופון להנחה:</div>
+            <div class="coupon-code" (click)="copyCouponCode('adicohen1280', $event)">adicohen1280</div>
+        </div>
+          <a href="https://oig.co.il/product/%d7%9e%d7%9b%d7%a9%d7%99%d7%a8-%d7%9c%d7%94%d7%9b%d7%a0%d7%aa-%d7%92%d7%9c%d7%99%d7%93%d7%94-dav1280/" class="purchase-link">לפרטים ולרכישה</a>
+        </div>
+      </div>
     </div>
-
-    <a href="https://oig.co.il" class="cta-button">לרכישה באתר Davo</a>
-</div>
-
-</body>
-</html>
+  </body>

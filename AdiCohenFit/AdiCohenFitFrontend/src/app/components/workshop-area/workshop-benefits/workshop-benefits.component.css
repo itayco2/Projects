@@ -1,0 +1,142 @@
+.benefits-container {
+    width: 100%;
+    padding: 60px 40px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/bread-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    width: 95%;
+    height: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 40px auto; 
+
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    flex-direction: row-reverse; /* Reverse order for RTL with highest number first */
+  }
+  
+  .benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+  }
+  
+  .number-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #FFF9E6; /* Cream color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D97A26; /* Orange-brown color */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .benefit-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  .benefit-item p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .gift-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .gift-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #FFF9E6;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #D97A26;
+  }
+  
+  
+  .gift-icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .benefits-grid {
+      gap: 30px;
+    }
+    
+    .benefit-item {
+      max-width: 250px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .benefits-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .benefit-item {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .benefits-container {
+      padding: 40px 20px;
+    }
+    
+    .title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+    }
+    
+    .number-circle {
+      width: 50px;
+      height: 50px;
+      font-size: 1.5rem;
+    }
+    
+    .gift-message {
+      flex-direction: column;
+    }
+  }

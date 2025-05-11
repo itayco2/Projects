@@ -1,6 +1,14 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg"
+    },
+    {
       "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg"
     },
@@ -27,6 +35,22 @@
     {
       "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\images\\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg",
+      "PackagePath": "staticwebassets\\images\\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\images\\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg",
+      "PackagePath": "staticwebassets\\images\\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\images\\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg",
+      "PackagePath": "staticwebassets\\images\\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg"
+    },
+    {
+      "Id": "C:\\Users\\itay7\\Desktop\\AdiCohenFit\\AdiCohenFitBackend\\AdiCohenFitBackend\\wwwroot\\images\\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg",
+      "PackagePath": "staticwebassets\\images\\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AdiCohenFitBackend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -1,5 +1,29 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/assets/images/10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AbGZ\u002BDVkVEfq5g4ut/HLRK2Lk\u002BgPgh4Innxd4OHVicI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2820252"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022AbGZ\u002BDVkVEfq5g4ut/HLRK2Lk\u002BgPgh4Innxd4OHVicI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Apr 2025 14:23:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/assets/images/10cf2e49-ac6e-42d1-b731-63b44107a0d6.n2m112w9or.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n2m112w9or"},{"Name":"integrity","Value":"sha256-AbGZ\u002BDVkVEfq5g4ut/HLRK2Lk\u002BgPgh4Innxd4OHVicI="},{"Name":"label","Value":"_content/AdiCohenFitBackend/assets/images/10cf2e49-ac6e-42d1-b731-63b44107a0d6.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2820252"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022AbGZ\u002BDVkVEfq5g4ut/HLRK2Lk\u002BgPgh4Innxd4OHVicI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 29 Apr 2025 14:23:32 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/assets/images/3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QNI/dK/9zYtkCRn69qQdAOpzwuVGU4ZjA\u002Bz0fpZsbWw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5651715"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QNI/dK/9zYtkCRn69qQdAOpzwuVGU4ZjA\u002Bz0fpZsbWw=\u0022"},{"Name":"Last-Modified","Value":"Wed, 30 Apr 2025 15:37:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/assets/images/3a98c7f1-0b8a-46a7-9ae5-d04196772731.kfhg6k49db.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kfhg6k49db"},{"Name":"integrity","Value":"sha256-QNI/dK/9zYtkCRn69qQdAOpzwuVGU4ZjA\u002Bz0fpZsbWw="},{"Name":"label","Value":"_content/AdiCohenFitBackend/assets/images/3a98c7f1-0b8a-46a7-9ae5-d04196772731.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5651715"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QNI/dK/9zYtkCRn69qQdAOpzwuVGU4ZjA\u002Bz0fpZsbWw=\u0022"},{"Name":"Last-Modified","Value":"Wed, 30 Apr 2025 15:37:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/assets/images/3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3e476dfa-a1fd-4bff-a1ac-eac6c44df0ef.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -83,6 +107,54 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kz23nuqaz2"},{"Name":"integrity","Value":"sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="},{"Name":"label","Value":"_content/AdiCohenFitBackend/assets/images/f5eff184-0a19-4b3e-902a-e00cb7c90912.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"51254"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Apr 2025 10:46:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP\u002BN2Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"469499"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP\u002BN2Y=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:26:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.u9i5874gs5.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u9i5874gs5"},{"Name":"integrity","Value":"sha256-PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP\u002BN2Y="},{"Name":"label","Value":"_content/AdiCohenFitBackend/images/7e36e460-49cc-44fb-8340-ea0ab007faca_nutrition.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"469499"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022PlB05uVOSsnj7U9x21m75lw9bwfs8JPJd52YCGP\u002BN2Y=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:26:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"51254"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:03:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.kz23nuqaz2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kz23nuqaz2"},{"Name":"integrity","Value":"sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="},{"Name":"label","Value":"_content/AdiCohenFitBackend/images/a2f2dcd8-ba4a-49b9-a9ec-4676d8e90546_workshops.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"51254"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 11:03:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"51254"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 16:03:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/de141438-0c62-4626-af83-ccbcff033afd_workshops.kz23nuqaz2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kz23nuqaz2"},{"Name":"integrity","Value":"sha256-IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo="},{"Name":"label","Value":"_content/AdiCohenFitBackend/images/de141438-0c62-4626-af83-ccbcff033afd_workshops.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"51254"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022IP9/O6MOg0n2/LCp75LmcakCtRr2QNIu98C80y9fVgo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 May 2025 16:03:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s1JZigOBytigjsRyRHSl3Bs4tb6ZyeejJIga7/Pk6Do="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1984202"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s1JZigOBytigjsRyRHSl3Bs4tb6ZyeejJIga7/Pk6Do=\u0022"},{"Name":"Last-Modified","Value":"Sun, 04 May 2025 13:17:43 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/AdiCohenFitBackend/images/f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.xvtc36tgsr.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xvtc36tgsr"},{"Name":"integrity","Value":"sha256-s1JZigOBytigjsRyRHSl3Bs4tb6ZyeejJIga7/Pk6Do="},{"Name":"label","Value":"_content/AdiCohenFitBackend/images/f18a123d-f5a2-4fbd-8974-6dbc4603bb8c_adi.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1984202"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022s1JZigOBytigjsRyRHSl3Bs4tb6ZyeejJIga7/Pk6Do=\u0022"},{"Name":"Last-Modified","Value":"Sun, 04 May 2025 13:17:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

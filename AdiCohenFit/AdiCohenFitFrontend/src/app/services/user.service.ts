@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment.development';
 import { firstValueFrom } from 'rxjs';
 import { CredentialsLoginModel, CredentialsModel } from '../models/credentials.model';
 import { AuthService } from './auth.service';
+import { NotifyService } from './notify.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +18,31 @@ export class UserService {
     private httpClient = inject(HttpClient);
     private userStore = inject(UserStore);
     private authService = inject(AuthService);
+    private notifyService = inject(NotifyService);
 
     public constructor() {
         const token = localStorage.getItem("token");
         if(!token) return;
-        const payload = jwtDecode<{ user: UserModel }>(token);
-        const dbUser = payload.user;
-        this.userStore.initUser(dbUser);
-        // Make sure AuthService knows about the token on initialization
-        this.authService.setToken(token);
+        
+        try {
+            const payload = jwtDecode<{ user: UserModel }>(token);
+            
+            // Verify the token contains user information
+            if (!payload || !payload.user || !payload.user.id) {
+                console.error('Invalid token format - missing user or user.id');
+                this.logout();
+                return;
+            }
+            
+            const dbUser = payload.user;
+            this.userStore.initUser(dbUser);
+            
+            // Make sure AuthService knows about the token on initialization
+            this.authService.setToken(token);
+        } catch (error) {
+            console.error('Error decoding token during initialization:', error);
+            this.logout();
+        }
     }
 
     // Method to register a new user
@@ -35,18 +52,34 @@ export class UserService {
             const token$ = this.httpClient.post<string>(environment.registerUrl, user, { responseType: 'text' as 'json' });
             const token = await firstValueFrom(token$);
 
-            // Decode the token to get user information
-            const payload = jwtDecode<{ user: UserModel }>(token);
-            const dbUser = payload.user;
+            // Verify token is valid before using it
+            if (!token) {
+                throw new Error('אירעה שגיאה בהרשמה - לא התקבל טוקן');
+            }
 
-            // Initialize the user store with the user information
-            this.userStore.initUser(dbUser);
+            try {
+                // Decode the token to get user information
+                const payload = jwtDecode<{ user: UserModel }>(token);
+                
+                // Verify the token contains user information
+                if (!payload || !payload.user || !payload.user.id) {
+                    throw new Error('אירעה שגיאה באימות המשתמש');
+                }
+                
+                const dbUser = payload.user;
 
-            // Store the token in local storage
-            localStorage.setItem("token", token);
+                // Initialize the user store with the user information
+                this.userStore.initUser(dbUser);
 
-            // Update AuthService with the new token
-            this.authService.setToken(token);
+                // Store the token in local storage
+                localStorage.setItem("token", token);
+
+                // Update AuthService with the new token
+                this.authService.setToken(token);
+            } catch (error) {
+                console.error('Error decoding token after registration:', error);
+                throw new Error('אירעה שגיאה באימות המשתמש');
+            }
         } catch (error: any) {
             // Check if error has a message property and properly extract it
             let errorMessage = "ההרשמה נכשלה";
@@ -58,6 +91,8 @@ export class UserService {
                 } catch {
                     errorMessage = error.error || "ההרשמה נכשלה";
                 }
+            } else if (error.message) {
+                errorMessage = error.message;
             }
             throw new Error(errorMessage);
         }
@@ -70,18 +105,34 @@ export class UserService {
             const token$ = this.httpClient.post<string>(environment.loginUrl, credentials, { responseType: 'text' as 'json' });
             const token = await firstValueFrom(token$);
 
-            // Decode the token to get user information
-            const payload = jwtDecode<{ user: UserModel }>(token);
-            const dbUser = payload.user;
+            // Verify token is valid before using it
+            if (!token) {
+                throw new Error('אירעה שגיאה בהתחברות - לא התקבל טוקן');
+            }
 
-            // Initialize the user store with the user information
-            this.userStore.initUser(dbUser);
+            try {
+                // Decode the token to get user information
+                const payload = jwtDecode<{ user: UserModel }>(token);
+                
+                // Verify the token contains user information
+                if (!payload || !payload.user || !payload.user.id) {
+                    throw new Error('אירעה שגיאה באימות המשתמש');
+                }
+                
+                const dbUser = payload.user;
 
-            // Store the token in local storage
-            localStorage.setItem("token", token);
+                // Initialize the user store with the user information
+                this.userStore.initUser(dbUser);
 
-            // Update AuthService with the new token
-            this.authService.setToken(token);
+                // Store the token in local storage
+                localStorage.setItem("token", token);
+
+                // Update AuthService with the new token
+                this.authService.setToken(token);
+            } catch (error) {
+                console.error('Error decoding token after login:', error);
+                throw new Error('אירעה שגיאה באימות המשתמש');
+            }
         } catch (error: any) {
             // Check if error has a message property and properly extract it
             let errorMessage = "התחברות נכשלה";
@@ -93,6 +144,8 @@ export class UserService {
                 } catch {
                     errorMessage = error.error || "התחברות נכשלה";
                 }
+            } else if (error.message) {
+                errorMessage = error.message;
             }
             throw new Error(errorMessage);
         }
@@ -103,5 +156,10 @@ export class UserService {
         this.userStore.logoutUser();
         this.authService.logout();
         localStorage.removeItem("token");
+    }
+
+    // Method to get current user ID
+    public getCurrentUserId(): string | null {
+        return this.authService.getUserId();
     }
 }

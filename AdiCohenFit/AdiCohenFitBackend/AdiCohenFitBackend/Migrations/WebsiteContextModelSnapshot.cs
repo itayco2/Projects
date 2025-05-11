@@ -22,6 +22,95 @@ namespace AdiCohenFIt.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AdiCohenFIt.SavedRecipe", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RecipeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("SavedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecipeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("SavedRecipes");
+                });
+
+            modelBuilder.Entity("AdiCohenFit.Recipe", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CookTimeMinutes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ingredients")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instructions")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PrepTimeMinutes")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RecipeDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RecipeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Servings")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Recipe");
+                });
+
+            modelBuilder.Entity("AdiCohenFit.RecipeCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CategoryDescription")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RecipeCategory");
+                });
+
             modelBuilder.Entity("AdiCohenFit.Role", b =>
                 {
                     b.Property<int>("RoleId")
@@ -131,6 +220,36 @@ namespace AdiCohenFIt.Migrations
                     b.ToTable("Workshop");
                 });
 
+            modelBuilder.Entity("AdiCohenFIt.SavedRecipe", b =>
+                {
+                    b.HasOne("AdiCohenFit.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AdiCohenFit.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Recipe");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("AdiCohenFit.Recipe", b =>
+                {
+                    b.HasOne("AdiCohenFit.RecipeCategory", "Category")
+                        .WithMany("Recipes")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("AdiCohenFit.User", b =>
                 {
                     b.HasOne("AdiCohenFit.Role", "Role")
@@ -144,6 +263,11 @@ namespace AdiCohenFIt.Migrations
                         .HasForeignKey("WorkshopId");
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("AdiCohenFit.RecipeCategory", b =>
+                {
+                    b.Navigation("Recipes");
                 });
 
             modelBuilder.Entity("AdiCohenFit.Role", b =>

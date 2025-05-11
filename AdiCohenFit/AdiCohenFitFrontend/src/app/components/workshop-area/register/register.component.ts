@@ -8,7 +8,6 @@ import { NotifyService } from '../../../services/notify.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule, FormControl } from '@angular/forms';
-import { PaymentService } from '../../../services/payment.service';
 
 @Component({
   selector: 'app-register',
@@ -38,7 +37,6 @@ export class RegisterComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private fb: FormBuilder,
-    private paymentService: PaymentService
   ) {}
 
   public async ngOnInit() {
@@ -153,61 +151,9 @@ export class RegisterComponent implements OnInit {
         email: this.paymentForm.get('email')?.value,
         phone: this.paymentForm.get('phone')?.value
       },
-      paymentMethod: this.paymentForm.get('paymentMethod')?.value,
-      paymentDetails: this.paymentForm.get('paymentMethod')?.value === 'creditCard' ? {
-        cardNumber: this.paymentForm.get('cardNumber')?.value,
-        expiryDate: this.paymentForm.get('expiryDate')?.value,
-        cvv: this.paymentForm.get('cvv')?.value,
-        cardholderName: this.paymentForm.get('cardholderName')?.value
-      } : {}
-    };
     
-    // Process payment based on selected method
-    if (this.paymentForm.get('paymentMethod')?.value === 'creditCard') {
-      this.processCardPayment(paymentData);
-    } else if (this.paymentForm.get('paymentMethod')?.value === 'paypal') {
-      this.processPayPalPayment(paymentData);
-    }
-  }
-  
-  processCardPayment(paymentData: any): void {
-    this.paymentService.processCardPayment(paymentData)
-      .subscribe({
-        next: (response) => {
-          this.handlePaymentSuccess(response);
-        },
-        error: (error) => {
-          this.handlePaymentError(error);
-        }
-      });
-  }
-  
-  processPayPalPayment(paymentData: any): void {
-    this.paymentService.getPayPalRedirectUrl(paymentData)
-      .subscribe({
-        next: (response) => {
-          // Redirect to PayPal
-          window.location.href = response.redirectUrl;
-        },
-        error: (error) => {
-          this.handlePaymentError(error);
-        }
-      });
-  }
-  
-  handlePaymentSuccess(response: any): void {
-    this.isSubmitting = false;
-    // Store transaction ID or reference
-    localStorage.setItem('transactionId', response.transactionId);
-    // Navigate to confirmation page
-    this.router.navigate(['/payment-success']);
-    this.notifyService.success('התשלום בוצע בהצלחה!');
-  }
-  
-  handlePaymentError(error: any): void {
-    this.isSubmitting = false;
-    console.error('Payment error:', error);
-    // Show error message to user
-    this.notifyService.error('שגיאה בתהליך התשלום. אנא נסו שנית מאוחר יותר.');
-  }
+    };
 }
+}
+  
+  

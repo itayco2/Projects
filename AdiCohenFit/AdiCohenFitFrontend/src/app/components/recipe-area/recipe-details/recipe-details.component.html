@@ -1,0 +1,158 @@
+<div class="recipe-details-container" dir="rtl">
+    <div *ngIf="isLoading" class="loading-container">
+      <mat-spinner diameter="60"></mat-spinner>
+      <p class="loading-text">טוען את המתכון...</p>
+    </div>
+  
+    <div *ngIf="!isLoading && recipe" class="recipe-content">
+      <!-- Recipe Header -->
+      <div class="recipe-header" [ngStyle]="{'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(' + recipe.imageUrl + ')'}">
+        <div class="header-content">
+          <h1 class="recipe-title">{{ recipe.recipeName }}</h1>
+          <div class="recipe-category">
+            <mat-icon>restaurant</mat-icon>
+            <span>{{ categoryName }}</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Recipe Info Bar -->
+      <div class="recipe-info-bar">
+        <div class="info-item">
+          <mat-icon>access_time</mat-icon>
+          <div class="info-text">
+            <span class="info-label">זמן הכנה</span>
+            <span class="info-value">{{ recipe.prepTimeMinutes }} דקות</span>
+          </div>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-item">
+          <mat-icon>whatshot</mat-icon>
+          <div class="info-text">
+            <span class="info-label">זמן בישול</span>
+            <span class="info-value">{{ recipe.cookTimeMinutes }} דקות</span>
+          </div>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-item">
+          <mat-icon>people</mat-icon>
+          <div class="info-text">
+            <span class="info-label">מספר מנות</span>
+            <span class="info-value">{{ recipe.servings }}</span>
+          </div>
+        </div>
+        <div class="info-divider"></div>
+        <div class="info-item">
+          <mat-icon>schedule</mat-icon>
+          <div class="info-text">
+            <span class="info-label">זמן כולל</span>
+            <span class="info-value">{{ recipe.prepTimeMinutes + recipe.cookTimeMinutes }} דקות</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Main Content -->
+      <mat-card class="recipe-main">
+        <!-- Description -->
+        <div class="recipe-description-section">
+          <h2>תיאור</h2>
+          <p class="recipe-description">{{ recipe.recipeDescription }}</p>
+        </div>
+  
+        <!-- Two Column Layout -->
+        <div class="recipe-columns">
+          <!-- Ingredients -->
+          <mat-card class="ingredients-card">
+            <mat-card-header>
+              <mat-card-title>
+                <div class="section-title">
+                  <mat-icon>format_list_bulleted</mat-icon>
+                  <span>מרכיבים</span>
+                </div>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <ul class="ingredients-list">
+                <li *ngFor="let ingredient of ingredientsList">
+                  <mat-icon class="check-icon">check_circle</mat-icon>
+                  <span>{{ ingredient }}</span>
+                </li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+  
+          <!-- Instructions -->
+          <div class="instructions-section">
+            <div class="section-header">
+              <div class="section-title">
+                <mat-icon>menu_book</mat-icon>
+                <span>הוראות הכנה</span>
+              </div>
+            </div>
+            <ol class="instructions-list">
+              <li *ngFor="let instruction of instructionsList; let i = index" class="instruction-step">
+                <div class="step-number">{{ i + 1 }}</div>
+                <div class="step-content">
+                  <p>{{ instruction }}</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </mat-card>
+  
+      <!-- Action Buttons -->
+      <div class="action-buttons">
+        <!-- Save Recipe Button -->
+        <button mat-raised-button [color]="isRecipeSaved ? 'warn' : 'primary'" 
+                class="action-button save-button" 
+                (click)="toggleSaveRecipe()" 
+                [disabled]="isSavingRecipe">
+          <mat-icon>{{ isRecipeSaved ? 'favorite' : 'favorite_border' }}</mat-icon>
+          {{ isRecipeSaved ? 'הסר מהמועדפים' : 'שמור למועדפים' }}
+        </button>
+        
+        <button mat-raised-button color="accent" class="action-button print-button" (click)="printRecipe()">
+          <mat-icon>print</mat-icon>
+          הדפס מתכון
+        </button>
+        
+        <button mat-raised-button color="primary" class="action-button" (click)="editRecipe()" *ngIf="canEdit">
+          <mat-icon>edit</mat-icon>
+          ערוך מתכון
+        </button>
+        
+        <button mat-raised-button color="warn" class="action-button" (click)="confirmDelete()" *ngIf="canEdit">
+          <mat-icon>delete</mat-icon>
+          מחק מתכון
+        </button>
+        
+        <button mat-raised-button class="action-button" (click)="goBack()">
+          <mat-icon>arrow_back</mat-icon>
+          חזרה למתכונים
+        </button>
+      </div>
+    </div>
+  
+    <!-- No Recipe Found -->
+    <div *ngIf="!isLoading && !recipe" class="no-recipe-container">
+      <mat-icon class="no-recipe-icon">sentiment_very_dissatisfied</mat-icon>
+      <h2>לא נמצא מתכון</h2>
+      <p>המתכון המבוקש אינו קיים או שנמחק</p>
+      <button mat-raised-button color="primary" (click)="goBack()">חזרה למתכונים</button>
+    </div>
+  
+    <!-- Delete Confirmation Dialog -->
+    <ng-template #deleteDialog>
+      <h2 mat-dialog-title>מחיקת מתכון</h2>
+      <mat-dialog-content>
+        האם את/ה בטוח/ה שברצונך למחוק את המתכון "{{ recipe?.recipeName }}"?
+        <br>
+        <strong>פעולה זו אינה ניתנת לביטול.</strong>
+      </mat-dialog-content>
+      <mat-dialog-actions align="end">
+        <button mat-button mat-dialog-close>ביטול</button>
+        <button mat-raised-button color="warn" [mat-dialog-close]="true">מחק מתכון</button>
+      </mat-dialog-actions>
+    </ng-template>
+  </div>

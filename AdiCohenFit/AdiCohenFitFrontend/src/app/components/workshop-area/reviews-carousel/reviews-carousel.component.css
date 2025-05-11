@@ -1,0 +1,190 @@
+/* reviews-carousel.component.css */
+.reviews-slider {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 60px;
+  overflow: hidden;
+}
+
+/* Container for all 3 reviews */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  gap: 40px;
+}
+
+/* Base review styling - removed box/card style */
+.review-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 280px;
+  position: relative;
+}
+
+/* Center review (featured) */
+.center-review {
+  z-index: 3;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Side reviews styling */
+.side-review {
+  z-index: 2;
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+.left-review {
+  transform-origin: right center;
+}
+
+.right-review {
+  transform-origin: left center;
+}
+
+/* Circular image - enlarged */
+.review-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Center review has larger image */
+.center-review .review-image {
+  width: 150px;
+  height: 150px;
+}
+
+/* Reviewer name */
+.reviewer-name {
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.center-review .reviewer-name {
+  font-size: 18px;
+}
+
+/* Star rating */
+.star-rating {
+  margin: 12px 0;
+}
+
+.star {
+  font-size: 22px;
+  margin: 0 2px;
+}
+
+.center-review .star {
+  font-size: 26px;
+}
+
+.filled-star {
+  color: gold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.empty-star {
+  color: #ddd;
+}
+
+/* Review text */
+.review-text {
+  font-style: italic;
+  line-height: 1.5;
+  color: #555;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.center-review .review-text {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Side reviews have truncated text */
+.side-review .review-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+/* Previous/Next controls */
+.slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.slider-control:hover {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* Navigation dots */
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #aaa;
+}
+
+.dot.active {
+  background-color: #007bff;
+  transform: scale(1.2);
+}

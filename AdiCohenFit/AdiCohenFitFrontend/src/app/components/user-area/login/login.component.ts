@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
 
             // Call service to login the user
             await this.userService.login(this.credentialsModel);  // Ensure login method is returning a Promise
-            this.notifyService.success('Welcome Back!');
+            this.notifyService.success('!ברוך הבא ');
             
             // Navigate to the home page
             this.router.navigateByUrl("/home");
